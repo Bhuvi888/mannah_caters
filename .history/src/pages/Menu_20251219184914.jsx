@@ -32,8 +32,6 @@ const tabVariants = {
   }),
 };
 
-const SWIPE_THRESHOLD = 80;
-
 const Menu = () => {
   const location = useLocation();
 
@@ -52,47 +50,28 @@ const Menu = () => {
     }
   }, [location.state]);
 
-  /* ----------------------------------
-     Swipe Handler
-  ----------------------------------- */
-  const handleDragEnd = (_, info) => {
-    const offsetX = info.offset.x;
-
-    // Swipe Left → Customize
-    if (offsetX < -SWIPE_THRESHOLD && activeTab === "combos") {
-      setDirection("customize");
-      setActiveTab("customize");
-    }
-
-    // Swipe Right → Combos
-    if (offsetX > SWIPE_THRESHOLD && activeTab === "customize") {
-      setDirection("combos");
-      setActiveTab("combos");
-    }
-  };
-
   return (
     <div className="min-h-screen flex flex-col bg-[#02301f] overflow-x-hidden">
       <main className="flex-1 flex flex-col items-center pb-20 px-4 sm:px-10 lg:px-40 pt-6 sm:pt-10">
         <div className="w-full max-w-[1200px] flex flex-col gap-6 sm:gap-8">
 
           {/* ---------------- Tabs ---------------- */}
-          <div
-            className="
-              sticky top-[56px] sm:top-[64px]
-              z-40 bg-[#013220]
-              pt-3 pb-2
-              border-b border-[#24473b]
-            "
-          >
-            <div
-              className="
-                flex gap-6
-                justify-start sm:justify-center
-                overflow-x-auto scrollbar-hide
-                px-2
-              "
-            >
+          <div className="
+            sticky top-[56px] sm:top-[64px]
+            z-40
+            bg-[#013220]
+            pt-3 pb-2
+            border-b border-[#24473b]
+          ">
+            <div className="
+              flex
+              gap-6
+              justify-start sm:justify-center
+              overflow-x-auto
+              scrollbar-hide
+              px-2
+            ">
+
               {/* Combos Tab */}
               <button
                 onClick={() => {
@@ -113,7 +92,7 @@ const Menu = () => {
                   }
                 `}
               >
-                <span className="text-sm sm:text-lg font-bold">
+                <span className="text-sm sm:text-lg font-bold tracking-[0.015em]">
                   Predefined Combos
                 </span>
               </button>
@@ -138,15 +117,16 @@ const Menu = () => {
                   }
                 `}
               >
-                <span className="text-sm sm:text-lg font-bold">
+                <span className="text-sm sm:text-lg font-bold tracking-[0.015em]">
                   Customize Your Own
                 </span>
               </button>
+
             </div>
           </div>
 
-          {/* ---------------- Swipe + Animated Content ---------------- */}
-          <div className="w-full touch-pan-y">
+          {/* ---------------- Animated Content ---------------- */}
+          <div className="w-full">
             <AnimatePresence mode="wait" initial={false}>
               <motion.div
                 key={activeTab}
@@ -155,10 +135,6 @@ const Menu = () => {
                 initial="initial"
                 animate="animate"
                 exit="exit"
-                drag="x"
-                dragConstraints={{ left: 0, right: 0 }}
-                dragElastic={0.15}
-                onDragEnd={handleDragEnd}
                 className="w-full"
               >
                 {activeTab === "combos" ? (

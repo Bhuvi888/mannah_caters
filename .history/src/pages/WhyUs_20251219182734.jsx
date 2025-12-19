@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   Leaf,
   Clock,
@@ -8,42 +8,37 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
 export default function WhyUs() {
-  const navigate = useNavigate();
 
-  /* ---------------- COUNTER ---------------- */
-  const Counter = ({ from = 0, to, duration = 1.5 }) => {
-    const count = useMotionValue(from);
-    const rounded = useTransform(count, (latest) => Math.round(latest));
+    const navigate = useNavigate();
+    const Counter = ({ from = 0, to, duration = 1.5 }) => {
+  const count = useMotionValue(from);
+  const rounded = useTransform(count, latest => Math.round(latest));
 
-    useEffect(() => {
-      const controls = animate(count, to, { duration });
-      return controls.stop;
-    }, [to]);
+  useEffect(() => {
+    const controls = animate(count, to, { duration });
+    return controls.stop;
+  }, [to]);
 
-    return <motion.span>{rounded}</motion.span>;
-  };
+  return <motion.span>{rounded}</motion.span>;
+};
+const Stat = ({ value, label }) => {
+  const number = parseInt(value); // "2000+" → 2000
+  const suffix = value.replace(number, "");
 
-  const Stat = ({ value, label }) => {
-    const number = parseInt(value.replace(/\D/g, ""));
-    const suffix = value.replace(number.toString(), "");
-
-    return (
-      <div className="px-4 py-6 sm:p-8 text-center">
-        <div className="text-4xl font-bold text-white">
-          <Counter to={number} />
-          {suffix}
-        </div>
-        <div className="mt-2 text-sm tracking-widest text-white/60">
-          {label}
-        </div>
+  return (
+    <div className="p-8 text-center">
+      <div className="text-4xl font-bold text-white">
+        <Counter to={number} />{suffix}
       </div>
-    );
-  };
-
-  /* ---------------- ANIMATIONS ---------------- */
+      <div className="mt-2 text-sm tracking-widest text-white/60">
+        {label}
+      </div>
+    </div>
+  );
+};
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -58,13 +53,13 @@ export default function WhyUs() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0c120c] text-white overflow-x-hidden">
+    <div className="min-h-screen bg-[#0c120c] text-white overflow-hidden">
 
-      {/* ================= HERO ================= */}
-      <div className="relative pt-28 sm:pt-32">
+      {/* HERO */}
+      <div className="relative pt-32">
         {/* Background */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-scroll md:bg-fixed"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
           style={{
             backgroundImage:
               'url("https://partyslate.imgix.net/photos/1734724/photo-a9678605-fbaf-49bd-8ba0-ea710f19c02f.jpg")',
@@ -90,7 +85,7 @@ export default function WhyUs() {
 
             <motion.h1
               variants={fadeInUp}
-              className="text-[32px] sm:text-[42px] lg:text-[72px] font-bold font-serif leading-[1.1]"
+              className="text-[42px] lg:text-[72px] font-bold font-serif leading-[1.1]"
             >
               Excellence in{" "}
               <span className="text-[#e2b857]">Every Bite</span>
@@ -104,15 +99,12 @@ export default function WhyUs() {
               discover why Mannah Caters is trusted for unforgettable events.
             </motion.p>
 
-            <motion.div
-              variants={fadeInUp}
-              className="mt-10 flex flex-col sm:flex-row gap-4"
-            >
+            <motion.div variants={fadeInUp} className="mt-10 flex flex-wrap gap-4">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-[#e2b857] hover:bg-[#cda446] cursor-pointer text-black px-8 py-3.5  font-bold shadow-lg"
-                onClick={() => navigate("/quote")}
+                className="bg-[#e2b857] hover:bg-[#cda446] cursor-pointer text-black px-8 py-3.5 rounded font-bold shadow-lg"
+                onClick={()=> navigate("/quote")}
               >
                 Book a Tasting
               </motion.button>
@@ -121,14 +113,14 @@ export default function WhyUs() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border border-white/30 cursor-pointer hover:border-[#e2b857] hover:text-[#e2b857] px-8 py-3.5 rounded backdrop-blur-sm"
-                onClick={() => navigate("/menu")}
+                onClick={()=>navigate("/menu")}
               >
                 View Sample Menu
               </motion.button>
             </motion.div>
           </motion.div>
 
-          {/* ================= STATS ================= */}
+          {/* STATS */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -136,26 +128,17 @@ export default function WhyUs() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="mt-20 bg-[#1b2636]/80 backdrop-blur-md border border-white/10 rounded-xl shadow-2xl overflow-hidden"
           >
-            <div className="
-              grid
-              grid-cols-1
-              sm:grid-cols-2
-              md:grid-cols-4
-              divide-y
-              sm:divide-y-0
-              sm:divide-x
-              divide-white/15
-            ">
-              <Stat value="10000+" label="GUESTS SERVED" />
-              <Stat value="7+" label="YEARS OF EXPERIENCE" />
-              <Stat value="250+" label="EVENTS CATERED" />
-              <Stat value="100%" label="HALAL & HYGIENE" />
+            <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">
+            <Stat value="2000+" label="GUESTS SERVED" />
+<Stat value="7+" label="YEARS OF EXPERIENCE" />
+<Stat value="400+" label="EVENTS CATERED" />
+<Stat value="100%" label="HALAL & HYGIENE" />
             </div>
           </motion.div>
         </section>
       </div>
 
-      {/* ================= COMMITMENTS ================= */}
+      {/* COMMITMENTS */}
       <section className="px-6 lg:px-20 py-20">
         <motion.div
           initial="hidden"
@@ -184,14 +167,14 @@ export default function WhyUs() {
           <FeatureCard icon={<Users />} title="Scalable Events" desc="From intimate parties to 2000+ guests." />
           <FeatureCard icon={<Utensils />} title="Custom Menus" desc="Tailored veg & non-veg menus." />
 
+          {/* Image Card */}
           <motion.div
             whileHover={{ y: -5 }}
             className="relative rounded-xl overflow-hidden bg-[#1b2636] border border-white/5 min-h-[260px] shadow-lg group"
           >
             <img
               src="https://images.unsplash.com/photo-1555244162-803834f70033"
-              loading="lazy"
-              className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 group-active:scale-105 transition-all duration-700"
+              className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-all duration-700"
             />
             <div className="relative p-8 h-full flex flex-col justify-end bg-gradient-to-t from-black/90 to-transparent">
               <h3 className="font-bold text-lg">Taste the Difference</h3>
@@ -203,8 +186,8 @@ export default function WhyUs() {
         </motion.div>
       </section>
 
-      {/* ================= TESTIMONIAL ================= */}
-      <section className="py-20 text-center bg-[#0f150f]">
+      {/* TESTIMONIAL */}
+      <section className="py-20 text-center bg-[#0f150f] relative overflow-hidden">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -221,7 +204,7 @@ export default function WhyUs() {
         </motion.div>
       </section>
 
-      {/* ================= CTA ================= */}
+      {/* CTA */}
       <section className="px-6 lg:px-20 py-24">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -236,17 +219,11 @@ export default function WhyUs() {
           <p className="mt-6 max-w-xl mx-auto text-gray-400">
             Let us craft a memorable culinary experience for your guests.
           </p>
-          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-            <button
-              onClick={() => navigate("/quote")}
-              className="bg-[#e2b857] cursor-pointer text-black px-8 py-3.5 rounded font-bold shadow-lg"
-            >
+          <div className="mt-10 flex justify-center gap-4">
+            <button onClick={() => navigate("/quote")} className="bg-[#e2b857] cursor-pointer text-black px-8 py-3.5 rounded font-bold shadow-lg">
               Get a Free Quote
             </button>
-            <button
-              onClick={() => navigate("/contact")}
-              className="border cursor-pointer border-white/20 hover:border-[#e2b857] hover:text-[#e2b857] px-8 py-3.5 rounded"
-            >
+            <button onClick={()=> navigate("/contact")} className="border cursor-pointer border-white/20 hover:border-[#e2b857] hover:text-[#e2b857] px-8 py-3.5 rounded">
               Contact Us
             </button>
           </div>
@@ -256,7 +233,21 @@ export default function WhyUs() {
   );
 }
 
-/* ================= FEATURE CARD ================= */
+/* COMPONENTS */
+
+// function Stat({ value, label }) {
+//   return (
+//     <div className="text-center py-8">
+//       <motion.h3 className="text-[36px] font-bold text-[#e2b857] font-serif">
+//         {value}
+//       </motion.h3>
+//       <p className="mt-2 text-xs uppercase tracking-widest text-gray-400">
+//         {label}
+//       </p>
+//     </div>
+//   );
+// }
+
 function FeatureCard({ icon, title, desc }) {
   return (
     <motion.div

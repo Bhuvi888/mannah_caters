@@ -111,7 +111,7 @@ export default function WhyUs() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-[#e2b857] hover:bg-[#cda446] cursor-pointer text-black px-8 py-3.5  font-bold shadow-lg"
+                className="bg-[#e2b857] hover:bg-[#cda446] cursor-pointer text-black px-8 py-3.5 rounded font-bold shadow-lg"
                 onClick={() => navigate("/quote")}
               >
                 Book a Tasting

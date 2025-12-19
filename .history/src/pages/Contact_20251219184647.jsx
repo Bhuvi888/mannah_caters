@@ -264,7 +264,7 @@ const App = ({ companyName = "Mannah Caters" }) => {
         <footer>
           <div className="border-t border-green-800 pt-6 pb-6">
             <p className="text-center text-yellow-400 hover:text-yellow-200 transition-colors cursor-default">
-             © {new Date().getFullYear()} Mannah Caters. Designed with elegance.
+              © 2023 Mannah Caters. All rights reserved. Designed with elegance.
             </p>
           </div>
        

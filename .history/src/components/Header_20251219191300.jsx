@@ -18,20 +18,7 @@ const Header = () => {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-  const [pastHero, setPastHero] = useState(false);
-useEffect(() => {
-  const onScroll = () => {
-    const scrollY = window.scrollY;
-    setScrolled(scrollY > 20);
-
-    // Trigger after hero (≈ 80% of viewport height)
-    setPastHero(scrollY > window.innerHeight * 0.8);
-  };
-
-  window.addEventListener("scroll", onScroll);
-  return () => window.removeEventListener("scroll", onScroll);
-}, []);
-
+  
   const linkBase =
     "text-sm font-medium leading-normal transition-colors relative";
 
@@ -42,22 +29,22 @@ useEffect(() => {
 
   return (
     <header
-  className={`
-    fixed top-0 left-0 w-full z-50
-    transition-all duration-300 ease-out
-    ${scrolled ? "h-[64px]" : "h-[80px]"}
+      className={`
+        fixed top-0 left-0 w-full z-50
+        transition-all duration-300 ease-out
+        ${scrolled ? "backdrop-blur-md shadow-lg h-[64px]" : "h-[80px]"}
 
-    ${
-      isHome
-        ? pastHero
-          ? "bg-[#013220]/95 backdrop-blur-md border-b border-[#24473b] shadow-lg"
-          : "bg-transparent border-b border-transparent"
-        : isWhyPage
-          ? "bg-[#0c120c]/95 backdrop-blur-md border-b border-white/10 shadow-lg"
-          : "bg-[#013220]/95 backdrop-blur-md border-b border-[#24473b] shadow-lg"
-    }
-  `}
->
+        ${
+          isHome
+            ? scrolled
+              ? "bg-[#013220]/5 border-b border-[#24473b]"
+              : "bg-transparent"
+            : isWhyPage
+              ? "bg-[#0c120c]/95 border-b border-white/10"
+              : "bg-[#013220]/95 border-b border-[#24473b]"
+        }
+      `}
+    >
       {/* TOP BAR */}
       <div className="flex items-center justify-between px-4 sm:px-10 h-full">
 

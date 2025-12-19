@@ -139,227 +139,114 @@ export default function App() {
       </nav>  */}
 
       {/* HERO */}
-   <section className="relative w-full h-[90vh] sm:h-[95vh] overflow-hidden bg-[#012a1c]">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-6 sm:pt-8">
 
-  {/* 🖼 Background Image */}
-  <img
-    src="/biriyani.png" // 🔴 replace with your image path
-    alt="Grand Biryani Preparation"
+        <div
+          className="rounded-2xl overflow-hidden min-h-[460px] flex items-center"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(53, 3, 94, 0.41),rgba(140, 143, 64, 0.66)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuDMRPc-kVlJB6ECB3wNkGq2zEXLknq2czlgIr2156k1dYCj5yRXY0uvLCTIRw_sna_hwstZ2gB0GRC3tQfFFTiQAhfqFlDtoMH2OCwHLQXMfrLec7LjPatLLTvNkQ7HxvxJV560-VD5brhv3tVXKrS4glxmWgLryF_6NzrQpLdIyO2cG_6gfjIvKVDMNv8QZjRCdCXpXFb2cRPngCRQ-pLNoj1-Gov3Q-FSKxS6tHlJwUfg8WOcHBZE6hYKmBcyRL1M1oLOiZJYLc4z')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+       <div
+  className="
+    max-w-2xl mx-auto px-8 text-center
+    animate-[fadeUp_1.1s_ease-out_forwards]
+  "
+>
+  <h1 className="text-3xl md:text-5xl font-extrabold text-[#facc26] leading-tight sm:leading-snug">
+
+    Exquisite Catering for <br /> Unforgettable Moments
+  </h1>
+
+  <p
     className="
-      absolute inset-0
-      w-full h-full
-      object-cover
-      scale-105
-      animate-[slowZoom_18s_ease-in-out_infinite]
+      mt-4 text-sm md:text-base
+      text-[#d6efe6]
+      opacity-0
+      animate-[fadeUp_1.1s_ease-out_0.35s_forwards]
     "
-  />
+  >
+    Experience culinary excellence and impeccable service tailored to your
+    special day. We bring passion, flavor, and elegance to every table.
+  </p>
 
-  {/* 🌑 Cinematic Overlays */}
-  <div className="absolute inset-0 bg-black/40" />
-  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-  <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/30" />
-
-  {/* ✨ Gold Glow (subtle luxury) */}
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_70%,rgba(250,204,21,0.15),transparent_30%)]" />
-
-  {/* ✨ Film Grain */}
-  <div className="absolute inset-0 opacity-[0.08] bg-[url('/grain.png')] pointer-events-none" />
-
-  {/* 🧾 Content */}
-  <div className="relative z-10 h-full flex items-center justify-center text-center">
-  <div className="max-w-3xl mx-auto px-6 sm:px-10">
-
-    {/* Tag */}
-    <span className="
-      inline-block mb-4
-      px-4 py-2
-      text-xs tracking-[0.35em] uppercase
-      border border-[#facc15]/60
-      text-[#facc15]
-      bg-black/30 backdrop-blur-sm rounded-full
-    ">
-      Mannah Caters
-    </span>
-
-    {/* Heading */}
-    <h1 className="
-      text-4xl sm:text-5xl lg:text-7xl
-      font-extrabold
-      leading-tight
-      text-white
-    ">
-      Crafted for
-      <span className="text-[#facc15]"> Grand Celebrations</span>
-    </h1>
-
-    {/* Description */}
-    <p className="mt-6 text-base sm:text-lg text-[#e6f4ee] max-w-xl mx-auto">
-      Authentic biryani, rich flavors, and large-scale perfection —
-      cooked with care for weddings, functions, and unforgettable moments.
-    </p>
-
-    {/* CTA Buttons */}
-    <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-
-      <button
-        className="
-          relative overflow-hidden
-          bg-[#facc15]
-          text-[#012a1c]
-          font-semibold
-          px-8 py-4
-          rounded-xl
-          shadow-lg
-          animate-[floatSoft_4s_ease-in-out_infinite]
-          hover:-translate-y-2
-          hover:shadow-[0_18px_40px_-8px_rgba(250,204,21,0.9)]
-          hover:animate-none
-          transition-all duration-300
-        "
-      >
-        View Menu
-      </button>
-
-      <button
-        className="
-          relative overflow-hidden
-          border border-[#facc15]
-          text-[#facc15]
-          bg-black/30 backdrop-blur-md
-          font-semibold
-          px-8 py-4
-          rounded-xl
-          animate-[floatSoft_5.5s_ease-in-out_infinite]
-          hover:bg-[#facc15]
-          hover:text-[#012a1c]
-          hover:-translate-y-2
-          hover:animate-none
-          transition-all duration-300
-        "
-      >
-        Book for Your Event
-      </button>
-
-    </div>
-
-    {/* Trust badges */}
-    <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm text-[#d6efe6]">
-      <span>✔ 100% Halal</span>
-      <span>✔ No Artificial Colors</span>
-      <span>✔ Natural Saffron</span>
-    </div>
-
-  </div>
-</div>
-
-  {/* ⬇ Scroll hint */}
-  <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-[#facc15] text-xs tracking-widest animate-pulse">
-    SCROLL
-  </div>
-
-  {/* 🎥 Animations */}
   <style>
     {`
-      @keyframes slowZoom {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.08); }
-        100% { transform: scale(1); }
-      }
-
-      @keyframes floatSoft {
-        0% { transform: translateY(0px); }
-        50% { transform: translateY(-6px); }
-        100% { transform: translateY(0px); }
+      @keyframes fadeUp {
+        0% {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     `}
   </style>
 
-{/* Right-side visual anchor */}
-{/* 🌫 Cinematic Steam Overlay */}
-<div className="pointer-events-none absolute inset-0 overflow-hidden">
-  <span className="steam steam-1" />
-  <span className="steam steam-2" />
-  <span className="steam steam-3" />
+
+<div className="mt-8 flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+
+  <button
+   onClick={() => navigate("/menu")}
+    className="
+     bg-[#facc15]
+    text-green-900
+    font-semibold
+    px-6 py-3
+    sm:px-8 sm:py-4
+    lg:px-10 lg:py-4
+    text-base sm:text-lg lg:text-xl
+    rounded-xl
+    shadow-lg
+    hover:scale-105
+    transition-all duration-300
+    "
+  >
+    View Menus
+  </button>
+
+  <button
+    onClick={() => navigate("/quote")}
+    className="
+       bg-[#facc15]/52
+    text-green-900
+    font-semibold
+    px-6 py-3
+    sm:px-8 sm:py-4
+    lg:px-10 lg:py-4
+    text-base sm:text-lg lg:text-xl
+    rounded-xl
+    border border-[#facc15]
+    backdrop-blur-lg
+    shadow-lg
+    hover:bg-[#facc15]
+    hover:scale-105
+    transition-all duration-300
+    "
+  >
+    Book Now
+  </button>
+
+  <style>
+    {`
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        25% { transform: translateY(-4px); }
+        50% { transform: translateY(0px); }
+        75% { transform: translateY(4px); }
+        100% { transform: translateY(0px); }
+      }
+    `}
+  </style>
 </div>
-<style>
-{`
-  .steam {
-    position: absolute;
-    right: -12%;
-    bottom: 6%;
-    width: 480px;
-    height: 480px;
-
-    /* 🌫 Warm, visible steam */
-    background: radial-gradient(
-      ellipse at center,
-      rgba(120, 100, 70, 0.45),
-      rgba(120, 100, 70, 0.25),
-      rgba(80, 70, 50, 0.15),
-      transparent 70%
-    );
-
-    filter: blur(55px);
-    opacity: 0.55;
-    mix-blend-mode: multiply;
-
-    animation: steamFloat 24s ease-in-out infinite;
-  }
-
-  .steam-1 {
-    bottom: 6%;
-    animation-delay: 0s;
-  }
-
-  .steam-2 {
-    bottom: 22%;
-    right: -6%;
-    width: 360px;
-    height: 360px;
-    opacity: 0.45;
-    animation-delay: 8s;
-  }
-
-  .steam-3 {
-    bottom: 38%;
-    right: -18%;
-    width: 560px;
-    height: 560px;
-    opacity: 0.35;
-    animation-delay: 14s;
-  }
-
-  @keyframes steamFloat {
-    0% {
-      transform: translateY(0px) translateX(0px);
-      opacity: 0.45;
-    }
-    50% {
-      transform: translateY(-90px) translateX(-50px);
-      opacity: 0.65;
-    }
-    100% {
-      transform: translateY(-180px) translateX(-90px);
-      opacity: 0.25;
-    }
-  }
-
-  /* 📱 Mobile tuning */
-  @media (max-width: 768px) {
-    .steam {
-      width: 300px;
-      height: 300px;
-      filter: blur(45px);
-      opacity: 0.45;
-    }
-  }
-`}
-</style>
-
-
-
-</section>
-
+        </div>
+        </div>
+      </section>
 
       {/* SERVICES */}
 <section
@@ -427,7 +314,6 @@ export default function App() {
             src={card.img}
             alt={card.title}
             className="h-48 w-full object-cover transition-transform duration-700 group-hover:scale-110"
-            loading="lazy"
           />
         </div>
         <div className="p-5">
@@ -464,14 +350,13 @@ export default function App() {
   <div className="max-w-6xl mx-auto px-6">
 
     <div className="
-  relative
-  h-[420px] sm:h-[560px] md:h-[720px] lg:h-[820px]
-  rounded-3xl overflow-hidden
-  shadow-2xl
-  border border-[#0e4a34]
-  bg-black
-">
-
+      relative
+      h-[720px] md:h-[820px]
+      rounded-3xl overflow-hidden
+      shadow-2xl
+      border border-[#0e4a34]
+      bg-black
+    ">
 
       {/* Video */}
       <video
@@ -520,51 +405,47 @@ export default function App() {
       matters most.
     </h2>
     {/* Cards */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-16">
-
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
       {[
         {
-  icon: "📖",
-  title: "Menu = Your Choice",
-  desc: "Tell us what you want. We’ll make it happen — simple as that.",
-  quote: "“No copy-paste menus here.”",
-},
-{
-  icon: "🍽",
-  title: "Service That Just Works",
-  desc: "Food on time, plates full, guests happy.",
-  quote: "“That’s how catering should be.”",
-},
-{
-  icon: "🌿",
-  title: "Fresh Means Fresh",
-  desc: "If it’s not fresh, it doesn’t go into the kitchen.",
-  quote: "“You can tell from the first bite.”",
-},
-{
-  icon: "☪",
-  title: "Halal, Always",
-  desc: "No shortcuts, no confusion — halal standards followed strictly.",
-  quote: "“Trust matters.”",
-},
-{
-  icon: "🚫",
-  title: "Artificial Colors? No Thanks",
-  desc: "We keep chemicals out of our food — period.",
-  quote: "“Clean food wins.”",
-},
-{
-  icon: "🌸",
-  title: "Saffron > Food Color",
-  desc: "Natural saffron does the job better than artificial colors ever could.",
-  quote: "“Natural is the new luxury.”",
-},
-
+          icon: "📖",
+          title: "Bespoke Menus",
+          desc: "Every menu is crafted to your taste and dietary needs, ensuring a unique culinary journey.",
+          quote: "“The menu felt like it was made just for us.”",
+        },
+        {
+          icon: "🍽",
+          title: "Impeccable Service",
+          desc: "Our professional, attentive staff ensures a seamless and delightful event from start to finish.",
+          quote: "“Service was flawless from start to finish.”",
+        },
+        {
+          icon: "🌿",
+          title: "Locally Sourced Ingredients",
+          desc: "We pride ourselves on using the freshest ingredients, sourced from trusted local partners.",
+          quote: "“Freshness you can taste in every bite.”",
+        },
+        {
+          icon: "☪",
+          title: "100% Halal Certified",
+          desc: "All our ingredients and preparation processes strictly follow halal standards.",
+          quote: "“Trust and purity in every meal.”",
+        },
+        {
+          icon: "🚫",
+          title: "No Artificial colours Added",
+          desc: "We ensure saffron-free cooking to respect dietary, cultural, and religious preferences.",
+          quote: "“Perfectly suited to our traditional values.”",
+        },
+        {
+          icon: "🌸",
+          title:"Saffron Added",
+          desc: "We enhance our dishes with saffron to provide a rich flavor and vibrant color.",
+          quote: "“The saffron added a luxurious touch.”",
+        },
       ].map((item) => (
         <div key={item.title} className="group [perspective:1000px]">
-          <div className="relative h-72 w-full rounded-2xl transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]
-group-active:[transform:rotateY(180deg)]
-">
+          <div className="relative h-72 w-full rounded-2xl transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
             {/* FRONT */}
             <div className="absolute inset-0 bg-[#0b4a34] rounded-2xl p-8 text-center shadow-lg [backface-visibility:hidden]">
               <div className="flex justify-center mb-6">
