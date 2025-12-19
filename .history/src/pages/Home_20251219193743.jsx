@@ -480,7 +480,7 @@ export default function App() {
           w-full h-full
           object-cover
         "
-        src="/heroimage3.mp4"
+        src="heroimage3.mp4"
         autoPlay
         loop
         muted
