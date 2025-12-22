@@ -8,16 +8,10 @@ import { useCart } from "../context/CartContext";
 const Menu = () => {
   const location = useLocation();
 
-  
   const [activeTab, setActiveTab] = useState("combos");
 
   // ✅ Cart state comes ONLY from context
-  const {
-    cart,
-    toggleCartItem,
-    guestCount,
-    setGuestCount,
-  } = useCart();
+  const { cart, toggleCartItem, guestCount, setGuestCount } = useCart();
 
   // ✅ Open Customize tab when coming from Quote page
   useEffect(() => {
@@ -30,11 +24,9 @@ const Menu = () => {
     <div className="min-h-screen flex flex-col bg-[#02301f]">
       <main className="flex-1 flex flex-col items-center pb-20 px-4 sm:px-10 lg:px-40 pt-10">
         <div className="w-full max-w-[1200px] flex flex-col gap-8">
-
           {/* Tabs */}
           <div className="sticky top-[64px] z-40 bg-[#013220] pt-4 pb-2 border-b border-[#24473b]">
             <div className="flex justify-center gap-8">
-              
               {/* Combos Tab */}
               <button
                 onClick={() => setActiveTab("combos")}
@@ -62,7 +54,6 @@ const Menu = () => {
                   Customize Your Own
                 </span>
               </button>
-
             </div>
           </div>
 
@@ -79,7 +70,6 @@ const Menu = () => {
               />
             )}
           </div>
-
         </div>
       </main>
     </div>

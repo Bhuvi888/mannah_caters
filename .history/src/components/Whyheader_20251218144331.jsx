@@ -25,7 +25,10 @@ const SpecialHeader = () => {
           <Link to="/menu" className="hover:text-[#e2b857] transition-colors">
             Menu
           </Link>
-          <Link to="/contact" className="hover:text-[#e2b857] transition-colors">
+          <Link
+            to="/contact"
+            className="hover:text-[#e2b857] transition-colors"
+          >
             Contact
           </Link>
         </div>

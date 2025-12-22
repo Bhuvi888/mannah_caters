@@ -1,5 +1,4 @@
- @import "tailwindcss";
-
+@import "tailwindcss";
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -31,8 +30,6 @@
   font-style: normal;
   font-display: swap;
 }
-
-
 
 /* 
 /* a {
@@ -75,7 +72,7 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
- /* @keyframes fadeUp {
+/* @keyframes fadeUp {
         0% {
           opacity: 0;
           transform: translateY(30px);

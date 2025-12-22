@@ -3,12 +3,7 @@ import { CATEGORIES, MENU_ITEMS } from "../constants";
 import MenuItem from "./MenuItem";
 import CartSidebar from "./CartSideBar";
 
-const CustomizeView = ({
-  cart,
-  guestCount,
-  setGuestCount,
-  toggleCartItem,
-}) => {
+const CustomizeView = ({ cart, guestCount, setGuestCount, toggleCartItem }) => {
   const selectedItems = MENU_ITEMS.filter((item) => cart.includes(item.id));
 
   // Simple smooth scroll handler
@@ -16,15 +11,16 @@ const CustomizeView = ({
     e.preventDefault();
     const element = document.getElementById(id);
     if (element) {
-        // Offset for sticky header
-        const headerOffset = 180;
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-      
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth"
-        });
+      // Offset for sticky header
+      const headerOffset = 180;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
     }
   };
 
@@ -38,24 +34,26 @@ const CustomizeView = ({
           </div>
           <nav className="flex flex-col gap-1">
             {CATEGORIES.map((cat, idx) => {
-                const isActive = idx === 0; // In a real app, track scroll position or state
-                return (
-                    <a
-                    key={cat.id}
-                    href={`#${cat.id}`}
-                    onClick={(e) => scrollToCategory(e, cat.id)}
-                    className={`flex items-center justify-between px-4 py-3 rounded-xl transition-all ${
-                        isActive 
-                        ? "bg-[#24473b]/50 text-[#d4af37] font-bold"
-                        : "text-[#94a3b8] hover:text-white hover:bg-white/5"
-                    }`}
-                    >
-                    <span className="text-sm">{cat.label}</span>
-                    {isActive && (
-                          <span className="material-symbols-outlined text-base">chevron_right</span>
-                    )}
-                    </a>
-                )
+              const isActive = idx === 0; // In a real app, track scroll position or state
+              return (
+                <a
+                  key={cat.id}
+                  href={`#${cat.id}`}
+                  onClick={(e) => scrollToCategory(e, cat.id)}
+                  className={`flex items-center justify-between px-4 py-3 rounded-xl transition-all ${
+                    isActive
+                      ? "bg-[#24473b]/50 text-[#d4af37] font-bold"
+                      : "text-[#94a3b8] hover:text-white hover:bg-white/5"
+                  }`}
+                >
+                  <span className="text-sm">{cat.label}</span>
+                  {isActive && (
+                    <span className="material-symbols-outlined text-base">
+                      chevron_right
+                    </span>
+                  )}
+                </a>
+              );
             })}
           </nav>
         </div>
@@ -70,10 +68,10 @@ const CustomizeView = ({
           return (
             <div key={cat.id} id={cat.id} className="scroll-mt-[180px]">
               <div className="flex items-center gap-4 mb-6">
-                  <h3 className="text-2xl font-bold text-[#d4af37]">
-                    {cat.title}
-                  </h3>
-                  <div className="h-px bg-[#24473b] flex-1"></div>
+                <h3 className="text-2xl font-bold text-[#d4af37]">
+                  {cat.title}
+                </h3>
+                <div className="h-px bg-[#24473b] flex-1"></div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {items.map((item) => (

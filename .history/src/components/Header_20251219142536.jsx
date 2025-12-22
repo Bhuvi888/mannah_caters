@@ -21,8 +21,7 @@ const Header = () => {
   const linkBase =
     "text-sm font-medium leading-normal transition-colors relative";
 
-  const linkInactive =
-    "text-slate-300 hover:text-white";
+  const linkInactive = "text-slate-300 hover:text-white";
 
   const linkActive =
     "text-[#d4af37] font-bold after:content-[''] after:absolute after:-bottom-4 after:left-0 after:w-full after:h-[2px] after:bg-[#d4af37]";
@@ -32,23 +31,20 @@ const Header = () => {
       className={`
         fixed top-0 left-0 w-full z-50
         transition-all duration-300 ease-out
-        ${scrolled
-          ? "backdrop-blur-md shadow-lg h-[64px]"
-          : "h-[80px]"
-        }
-        ${isWhyPage
-          ? scrolled
-            ? "bg-[#0c120c]/95 border-b border-white/10"
-            : "bg-[#0c120c]/70"
-          : scrolled
-            ? "bg-[#013220]/95 border-b border-[#24473b]"
-            : "bg-[#013220]/70"
+        ${scrolled ? "backdrop-blur-md shadow-lg h-[64px]" : "h-[80px]"}
+        ${
+          isWhyPage
+            ? scrolled
+              ? "bg-[#0c120c]/95 border-b border-white/10"
+              : "bg-[#0c120c]/70"
+            : scrolled
+              ? "bg-[#013220]/95 border-b border-[#24473b]"
+              : "bg-[#013220]/70"
         }
       `}
     >
       {/* TOP BAR */}
       <div className="flex items-center justify-between px-4 sm:px-10 h-full">
-
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
           <img
@@ -62,7 +58,6 @@ const Header = () => {
             className={`text-white font-header font-bold tracking-tight transition-all duration-300 ${
               scrolled ? "text-lg" : "text-xl"
             }`}
-             
           >
             Mannah Caterers
           </span>
@@ -70,7 +65,6 @@ const Header = () => {
 
         {/* Right */}
         <div className="flex items-center gap-3 md:gap-8">
-
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-9">
             {["/", "/menu", "/contact", "/why-us"].map((path, i) => (
@@ -118,9 +112,10 @@ const Header = () => {
           className={`
             md:hidden border-t
             transition-all duration-300
-            ${isWhyPage
-              ? "border-white/10 bg-[#0c120c]"
-              : "border-[#24473b] bg-[#013220]"
+            ${
+              isWhyPage
+                ? "border-white/10 bg-[#0c120c]"
+                : "border-[#24473b] bg-[#013220]"
             }
           `}
         >

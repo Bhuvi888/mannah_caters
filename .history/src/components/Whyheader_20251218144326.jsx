@@ -5,9 +5,7 @@ const Landing = () => {
     <>
       <SpecialHeader />
 
-      <main className="pt-24">
-        {/* page content */}
-      </main>
+      <main className="pt-24">{/* page content */}</main>
     </>
   );
 };

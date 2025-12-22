@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Phone, MessageSquare, MapPin, Mail, Clock, Instagram } from "lucide-react";
+import {
+  Phone,
+  MessageSquare,
+  MapPin,
+  Mail,
+  Clock,
+  Instagram,
+} from "lucide-react";
 
 const WEB_APP_URL =
   "https://script.google.com/macros/s/AKfycby_gTClTv04-nN5LU9ZXGKad38B8TzEFfw-nz08r3hfe06J9fnldWuKvtutwQyao3dM/exec";
@@ -62,7 +69,9 @@ const App = ({ companyName = "Mannah Caterers" }) => {
       {/* HERO + LEFT CONTENT REMAINS UNCHANGED */}
 
       {/* Right Column - Form */}
-      <div className={`bg-green-900 border-2 border-yellow-400 rounded-2xl p-8 transform transition-all duration-1000 delay-500 ${loaded ? "translate-x-0 opacity-100" : "translate-x-20 opacity-0"}`}>
+      <div
+        className={`bg-green-900 border-2 border-yellow-400 rounded-2xl p-8 transform transition-all duration-1000 delay-500 ${loaded ? "translate-x-0 opacity-100" : "translate-x-20 opacity-0"}`}
+      >
         <h3 className="text-white text-2xl font-bold mb-6 flex items-center gap-2">
           Send us a Message
         </h3>

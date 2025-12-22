@@ -9,17 +9,14 @@ const Menu = () => {
 
   const toggleCartItem = (id) => {
     setCart((prev) =>
-      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id],
     );
   };
 
   return (
     <div className="min-h-screen flex flex-col">
-    
-
       <main className="flex-1 flex flex-col items-center pb-20 px-4 sm:px-10 lg:px-40 pt-10">
         <div className="w-full max-w-[1200px] flex flex-col gap-8">
-          
           {/* Tabs */}
           <div className="sticky top-[64px] z-40 bg-[#013220] pt-4 pb-2 border-b border-[#24473b]">
             <div className="flex justify-center gap-8">

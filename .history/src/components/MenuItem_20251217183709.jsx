@@ -1,6 +1,6 @@
 import React from "react";
 import { Check } from "lucide-react";
-import {  AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 const MenuItem = ({ item, isSelected, onToggle }) => {
   return (

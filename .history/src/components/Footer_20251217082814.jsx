@@ -26,14 +26,14 @@ const Footer = ({ onNavigate }) => {
             <h4 className="text-white font-bold text-sm uppercase tracking-wider">
               Menu
             </h4>
-            <button 
-              onClick={() => handleNav("combos")} 
+            <button
+              onClick={() => handleNav("combos")}
               className="text-left text-slate-400 hover:text-secondary-gold text-sm transition-colors"
             >
               Signature Packages
             </button>
-            <button 
-              onClick={() => handleNav("customize")} 
+            <button
+              onClick={() => handleNav("customize")}
               className="text-left text-slate-400 hover:text-secondary-gold text-sm transition-colors"
             >
               Customize Your Own
@@ -43,13 +43,22 @@ const Footer = ({ onNavigate }) => {
             <h4 className="text-white font-bold text-sm uppercase tracking-wider">
               Contact
             </h4>
-            <a href="#" className="text-slate-400 hover:text-secondary-gold text-sm transition-colors">
+            <a
+              href="#"
+              className="text-slate-400 hover:text-secondary-gold text-sm transition-colors"
+            >
               Enquiry
             </a>
-            <a href="#" className="text-slate-400 hover:text-secondary-gold text-sm transition-colors">
+            <a
+              href="#"
+              className="text-slate-400 hover:text-secondary-gold text-sm transition-colors"
+            >
               Locations
             </a>
-            <a href="#" className="text-slate-400 hover:text-secondary-gold text-sm transition-colors">
+            <a
+              href="#"
+              className="text-slate-400 hover:text-secondary-gold text-sm transition-colors"
+            >
               Support
             </a>
           </div>

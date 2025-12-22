@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import { motion, AnimatePresence } from "framer-motion";
 
-
 const PackageCard = ({ pkg, isOpen, onToggle, onCustomize }) => {
   const navigate = useNavigate();
   const { setCart } = useCart();

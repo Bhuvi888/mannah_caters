@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  ShoppingBag,
-  X,
-  ArrowRight,
-  MessageCircle,
-} from "lucide-react";
+import { ShoppingBag, X, ArrowRight, MessageCircle } from "lucide-react";
 
 const CartSidebar = ({
   selectedItems,
@@ -15,10 +10,8 @@ const CartSidebar = ({
   return (
     <div className="w-full lg:w-[360px] flex-shrink-0">
       <div className="lg:sticky lg:top-[140px] flex flex-col gap-6">
-        
         {/* Main Cart Card */}
         <div className="bg-[#022c1e] rounded-3xl border border-[#24473b] p-5 sm:p-6 shadow-2xl relative overflow-hidden">
-          
           {/* Gold top accent */}
           <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#d4af37]/40 via-[#d4af37] to-[#d4af37]/40" />
 
@@ -75,9 +68,7 @@ const CartSidebar = ({
               type="number"
               min={1}
               value={guestCount}
-              onChange={(e) =>
-                setGuestCount(parseInt(e.target.value) || 0)
-              }
+              onChange={(e) => setGuestCount(parseInt(e.target.value) || 0)}
               className="w-full bg-[#011c12] border border-[#24473b] rounded-xl text-white px-4 py-3 text-sm focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37] outline-none transition placeholder-[#475569]"
             />
           </div>
@@ -109,7 +100,6 @@ const CartSidebar = ({
             </button>
           </p>
         </div>
-
       </div>
     </div>
   );

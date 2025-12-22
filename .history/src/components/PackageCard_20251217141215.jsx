@@ -11,7 +11,7 @@ const PackageCard = ({ pkg, isOpen, onToggle, onCustomize }) => {
     >
       <div
         className={`flex flex-col md:flex-row items-start md:items-center justify-between p-6 cursor-pointer relative z-10 select-none transition-colors ${
-            isOpen ? 'bg-[#0a2e22]' : 'hover:bg-white/5'
+          isOpen ? "bg-[#0a2e22]" : "hover:bg-white/5"
         }`}
         onClick={onToggle}
       >
@@ -28,7 +28,7 @@ const PackageCard = ({ pkg, isOpen, onToggle, onCustomize }) => {
                 : "border-[#24473b]"
             }`}
           >
-           <pkg.icon className="w-6 h-6 fill-current" />
+            <pkg.icon className="w-6 h-6 fill-current" />
           </div>
           <div className="flex flex-col gap-1">
             <h3 className="text-2xl font-bold text-[#d4af37] group-hover:text-white transition-colors">
@@ -53,9 +53,11 @@ const PackageCard = ({ pkg, isOpen, onToggle, onCustomize }) => {
           isOpen ? "max-h-[800px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className={`px-6 pb-8 pt-2 ${isOpen ? 'bg-[#0a2e22]/50' : ''}`}>
+        <div className={`px-6 pb-8 pt-2 ${isOpen ? "bg-[#0a2e22]/50" : ""}`}>
           <div className="h-px w-full bg-[#24473b] mb-6"></div>
-          <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ${pkg.features.length > 4 ? 'lg:grid-cols-5' : 'lg:grid-cols-4'} gap-4 mb-8`}>
+          <div
+            className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ${pkg.features.length > 4 ? "lg:grid-cols-5" : "lg:grid-cols-4"} gap-4 mb-8`}
+          >
             {pkg.features.map((feature, idx) => (
               <div
                 key={idx}
@@ -78,11 +80,11 @@ const PackageCard = ({ pkg, isOpen, onToggle, onCustomize }) => {
               Request Custom Quote
             </button>
             <button
-                onClick={(e) => {
-                    e.stopPropagation();
-                    onCustomize();
-                }}
-                className="flex-1 py-3 px-6 border border-[#d4af37] text-[#d4af37] font-bold rounded-lg hover:bg-[#d4af37] hover:text-[#013220] transition-colors"
+              onClick={(e) => {
+                e.stopPropagation();
+                onCustomize();
+              }}
+              className="flex-1 py-3 px-6 border border-[#d4af37] text-[#d4af37] font-bold rounded-lg hover:bg-[#d4af37] hover:text-[#013220] transition-colors"
             >
               Customize This Package
             </button>

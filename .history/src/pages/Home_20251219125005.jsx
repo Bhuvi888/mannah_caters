@@ -5,11 +5,8 @@ export default function Home() {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
-  
-
   return (
     <main className="bg-[#063826] text-white min-h-screen font-sans">
-
       {/* ================= HERO ================= */}
       <section className="max-w-7xl mx-auto px-6 pt-10">
         <div
@@ -163,7 +160,6 @@ export default function Home() {
           Get a Quote
         </button>
       </section>
-
     </main>
   );
 }

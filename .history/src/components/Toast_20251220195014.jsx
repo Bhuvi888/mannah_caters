@@ -24,9 +24,7 @@ const Toast = ({ type = "success", message, onClose }) => {
         <XCircle className="w-6 h-6 text-red-400 mt-0.5" />
       )}
 
-      <div className="flex-1 text-sm leading-relaxed">
-        {message}
-      </div>
+      <div className="flex-1 text-sm leading-relaxed">{message}</div>
 
       <button
         onClick={onClose}

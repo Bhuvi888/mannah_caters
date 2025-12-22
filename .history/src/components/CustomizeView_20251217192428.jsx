@@ -12,17 +12,10 @@ const CustomizeView = () => {
   const [activeCategory, setActiveCategory] = useState(CATEGORIES[0]?.id);
 
   // ✅ Read cart state from context
-  const {
-    cart,
-    toggleCartItem,
-    guestCount,
-    setGuestCount,
-  } = useCart();
+  const { cart, toggleCartItem, guestCount, setGuestCount } = useCart();
 
   // Selected items derived from cart
-  const selectedItems = MENU_ITEMS.filter((item) =>
-    cart.includes(item.id)
-  );
+  const selectedItems = MENU_ITEMS.filter((item) => cart.includes(item.id));
 
   // Smooth scroll to category
   const scrollToCategory = (e, id) => {
@@ -31,8 +24,7 @@ const CustomizeView = () => {
     if (!element) return;
 
     const elementPosition = element.getBoundingClientRect().top;
-    const offsetPosition =
-      elementPosition + window.pageYOffset - HEADER_OFFSET;
+    const offsetPosition = elementPosition + window.pageYOffset - HEADER_OFFSET;
 
     setActiveCategory(id);
 
@@ -52,10 +44,7 @@ const CustomizeView = () => {
         if (!section) continue;
 
         const rect = section.getBoundingClientRect();
-        if (
-          rect.top <= HEADER_OFFSET + 20 &&
-          rect.bottom > HEADER_OFFSET
-        ) {
+        if (rect.top <= HEADER_OFFSET + 20 && rect.bottom > HEADER_OFFSET) {
           current = cat.id;
         }
       }
@@ -71,7 +60,6 @@ const CustomizeView = () => {
 
   return (
     <div className="flex flex-col lg:flex-row gap-8 w-full max-w-[1400px] mx-auto px-4 lg:px-0">
-
       {/* Desktop Category Sidebar */}
       <aside className="hidden lg:block w-[240px] flex-shrink-0">
         <div className="sticky top-[140px] bg-[#022c1e] rounded-2xl border border-[#24473b] p-2">
@@ -110,17 +98,11 @@ const CustomizeView = () => {
       {/* Main Menu Content */}
       <main className="flex-1 flex flex-col gap-12 min-w-0">
         {CATEGORIES.map((cat) => {
-          const items = MENU_ITEMS.filter(
-            (item) => item.category === cat.id
-          );
+          const items = MENU_ITEMS.filter((item) => item.category === cat.id);
           if (!items.length) return null;
 
           return (
-            <section
-              key={cat.id}
-              id={cat.id}
-              className="scroll-mt-[180px]"
-            >
+            <section key={cat.id} id={cat.id} className="scroll-mt-[180px]">
               {/* Category Header */}
               <div className="flex items-center gap-4 mb-6">
                 <h3 className="text-xl sm:text-2xl font-bold text-[#d4af37]">

@@ -10,8 +10,7 @@ import {
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 export default function WhyUs() {
-
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -27,7 +26,6 @@ export default function WhyUs() {
 
   return (
     <div className="min-h-screen bg-[#0c120c] text-white overflow-hidden">
-
       {/* HERO */}
       <div className="relative pt-32">
         {/* Background */}
@@ -60,8 +58,7 @@ export default function WhyUs() {
               variants={fadeInUp}
               className="text-[42px] lg:text-[72px] font-bold font-serif leading-[1.1]"
             >
-              Excellence in{" "}
-              <span className="text-[#e2b857]">Every Bite</span>
+              Excellence in <span className="text-[#e2b857]">Every Bite</span>
             </motion.h1>
 
             <motion.p
@@ -72,7 +69,10 @@ export default function WhyUs() {
               discover why Mannah Caterers is trusted for unforgettable events.
             </motion.p>
 
-            <motion.div variants={fadeInUp} className="mt-10 flex flex-wrap gap-4">
+            <motion.div
+              variants={fadeInUp}
+              className="mt-10 flex flex-wrap gap-4"
+            >
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -131,11 +131,31 @@ export default function WhyUs() {
           variants={staggerContainer}
           className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          <FeatureCard icon={<Leaf />} title="Fresh & Hygienic" desc="Certified kitchens and farm-fresh ingredients." />
-          <FeatureCard icon={<Clock />} title="On-Time Delivery" desc="Hot, fresh, and perfectly timed service." />
-          <FeatureCard icon={<ChefHat />} title="Experienced Chefs" desc="Multi-cuisine experts with decades of skill." />
-          <FeatureCard icon={<Users />} title="Scalable Events" desc="From intimate parties to 2000+ guests." />
-          <FeatureCard icon={<Utensils />} title="Custom Menus" desc="Tailored veg & non-veg menus." />
+          <FeatureCard
+            icon={<Leaf />}
+            title="Fresh & Hygienic"
+            desc="Certified kitchens and farm-fresh ingredients."
+          />
+          <FeatureCard
+            icon={<Clock />}
+            title="On-Time Delivery"
+            desc="Hot, fresh, and perfectly timed service."
+          />
+          <FeatureCard
+            icon={<ChefHat />}
+            title="Experienced Chefs"
+            desc="Multi-cuisine experts with decades of skill."
+          />
+          <FeatureCard
+            icon={<Users />}
+            title="Scalable Events"
+            desc="From intimate parties to 2000+ guests."
+          />
+          <FeatureCard
+            icon={<Utensils />}
+            title="Custom Menus"
+            desc="Tailored veg & non-veg menus."
+          />
 
           {/* Image Card */}
           <motion.div
@@ -165,9 +185,12 @@ export default function WhyUs() {
           transition={{ duration: 0.6 }}
           className="px-6 max-w-4xl mx-auto"
         >
-          <div className="text-[#e2b857] text-6xl mb-6 font-serif opacity-50">“</div>
+          <div className="text-[#e2b857] text-6xl mb-6 font-serif opacity-50">
+            “
+          </div>
           <p className="text-[20px] md:text-[26px] font-serif italic text-gray-200">
-            Mannah Caterers made our wedding unforgettable. The food and service were flawless.
+            Mannah Caterers made our wedding unforgettable. The food and service
+            were flawless.
           </p>
           <p className="mt-8 text-[#e2b857] font-bold">David & Sarah</p>
           <p className="text-xs text-gray-400 uppercase">Wedding Reception</p>
@@ -190,10 +213,16 @@ export default function WhyUs() {
             Let us craft a memorable culinary experience for your guests.
           </p>
           <div className="mt-10 flex justify-center gap-4">
-            <button onClick={() => navigate("/")} className="bg-[#e2b857] text-black px-8 py-3.5 rounded font-bold shadow-lg">
+            <button
+              onClick={() => navigate("/")}
+              className="bg-[#e2b857] text-black px-8 py-3.5 rounded font-bold shadow-lg"
+            >
               Get a Free Quote
             </button>
-            <button onClick={()=> navigate("/contact")} className="border border-white/20 hover:border-[#e2b857] hover:text-[#e2b857] px-8 py-3.5 rounded">
+            <button
+              onClick={() => navigate("/contact")}
+              className="border border-white/20 hover:border-[#e2b857] hover:text-[#e2b857] px-8 py-3.5 rounded"
+            >
               Contact Us
             </button>
           </div>
@@ -221,7 +250,10 @@ function Stat({ value, label }) {
 function FeatureCard({ icon, title, desc }) {
   return (
     <motion.div
-      variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+      variants={{
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 },
+      }}
       whileHover={{ y: -5 }}
       className="bg-[#1b2636] border border-white/5 rounded-xl p-8 shadow-lg"
     >

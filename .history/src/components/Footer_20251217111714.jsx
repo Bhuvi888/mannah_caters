@@ -17,7 +17,8 @@ const Footer = ({ onNavigate }) => {
             Mannah Caterers ~ Food For Soul
           </h4>
           <p className="text-sm mt-2">
-            Crafting unforgettable culinary experiences with passion and elegance.
+            Crafting unforgettable culinary experiences with passion and
+            elegance.
           </p>
         </div>
         <div>
@@ -27,8 +28,8 @@ const Footer = ({ onNavigate }) => {
               Services
             </li>
             {/* I added the onClick here so handleNav is actually used */}
-            <li 
-              onClick={() => handleNav("combos")} 
+            <li
+              onClick={() => handleNav("combos")}
               className="hover:text-white cursor-pointer transition-colors"
             >
               Menu

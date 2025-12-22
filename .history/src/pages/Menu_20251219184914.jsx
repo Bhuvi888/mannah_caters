@@ -54,24 +54,26 @@ const Menu = () => {
     <div className="min-h-screen flex flex-col bg-[#02301f] overflow-x-hidden">
       <main className="flex-1 flex flex-col items-center pb-20 px-4 sm:px-10 lg:px-40 pt-6 sm:pt-10">
         <div className="w-full max-w-[1200px] flex flex-col gap-6 sm:gap-8">
-
           {/* ---------------- Tabs ---------------- */}
-          <div className="
+          <div
+            className="
             sticky top-[56px] sm:top-[64px]
             z-40
             bg-[#013220]
             pt-3 pb-2
             border-b border-[#24473b]
-          ">
-            <div className="
+          "
+          >
+            <div
+              className="
               flex
               gap-6
               justify-start sm:justify-center
               overflow-x-auto
               scrollbar-hide
               px-2
-            ">
-
+            "
+            >
               {/* Combos Tab */}
               <button
                 onClick={() => {
@@ -121,7 +123,6 @@ const Menu = () => {
                   Customize Your Own
                 </span>
               </button>
-
             </div>
           </div>
 
@@ -155,7 +156,6 @@ const Menu = () => {
               </motion.div>
             </AnimatePresence>
           </div>
-
         </div>
       </main>
     </div>

@@ -7,7 +7,6 @@ export default function Home() {
 
   return (
     <div className="bg-[#063826] text-white min-h-screen font-sans">
-
       {/* ================= HERO ================= */}
       <section className="max-w-7xl mx-auto px-6 mt-8">
         <div
@@ -26,7 +25,8 @@ export default function Home() {
 
             <p className="mt-4 text-sm md:text-base text-[#d6efe6] opacity-0 animate-[fadeUp_1.1s_ease-out_0.35s_forwards]">
               Experience culinary excellence and impeccable service tailored to
-              your special day. We bring passion, flavor, and elegance to every table.
+              your special day. We bring passion, flavor, and elegance to every
+              table.
             </p>
 
             <div className="mt-8 flex justify-center gap-6">
@@ -94,9 +94,7 @@ export default function Home() {
                 <h3 className="text-lg font-semibold text-[#e0b84c]">
                   {card.title}
                 </h3>
-                <p className="mt-2 text-sm text-[#cfe9df]">
-                  {card.desc}
-                </p>
+                <p className="mt-2 text-sm text-[#cfe9df]">{card.desc}</p>
               </div>
             </div>
           ))}
@@ -135,7 +133,8 @@ export default function Home() {
             WHY CHOOSE US
           </p>
           <h2 className="text-3xl md:text-2xl font-bold max-w-3xl mx-auto">
-            We deliver an unparalleled catering experience by focusing on what matters most.
+            We deliver an unparalleled catering experience by focusing on what
+            matters most.
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
@@ -155,7 +154,8 @@ export default function Home() {
                   {title}
                 </h3>
                 <p className="text-sm text-[#cfe9df]">
-                  Crafted with care to meet quality, cultural, and taste standards.
+                  Crafted with care to meet quality, cultural, and taste
+                  standards.
                 </p>
               </div>
             ))}
@@ -175,7 +175,6 @@ export default function Home() {
           Get a Quote
         </button>
       </section>
-
     </div>
   );
 }

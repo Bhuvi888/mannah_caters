@@ -6,56 +6,55 @@ export default function Home() {
 
   return (
     <main className="bg-[#063826] text-white min-h-screen font-sans">
-
       {/* ================= HERO ================= */}
-    <section className="max-w-7xl mx-auto px-6 mt-8">
-  <div
-    className="relative min-h-[460px] rounded-2xl overflow-hidden flex items-center"
-    style={{
-      backgroundImage:
-        "linear-gradient(rgba(53,3,94,0.45), rgba(140,143,64,0.6)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuDMRPc-kVlJB6ECB3wNkGq2zEXLknq2czlgIr2156k1dYCj5yRXY0uvLCTIRw_sna_hwstZ2gB0GRC3tQfFFTiQAhfqFlDtoMH2OCwHLQXMfrLec7LjPatLLTvNkQ7HxvxJV560-VD5brhv3tVXKrS4glxmWgLryF_6NzrQpLdIyO2cG_6gfjIvKVDMNv8QZjRCdCXpXFb2cRPngCRQ-pLNoj1-Gov3Q-FSKxS6tHlJwUfg8WOcHBZE6hYKmBcyRL1M1oLOiZJYLc4z')",
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-    }}
-  >
-    {/* Overlay */}
-    <div className="absolute inset-0 bg-black/40" />
+      <section className="max-w-7xl mx-auto px-6 mt-8">
+        <div
+          className="relative min-h-[460px] rounded-2xl overflow-hidden flex items-center"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(53,3,94,0.45), rgba(140,143,64,0.6)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuDMRPc-kVlJB6ECB3wNkGq2zEXLknq2czlgIr2156k1dYCj5yRXY0uvLCTIRw_sna_hwstZ2gB0GRC3tQfFFTiQAhfqFlDtoMH2OCwHLQXMfrLec7LjPatLLTvNkQ7HxvxJV560-VD5brhv3tVXKrS4glxmWgLryF_6NzrQpLdIyO2cG_6gfjIvKVDMNv8QZjRCdCXpXFb2cRPngCRQ-pLNoj1-Gov3Q-FSKxS6tHlJwUfg8WOcHBZE6hYKmBcyRL1M1oLOiZJYLc4z')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/40" />
 
-    {/* Content */}
-    <div className="relative z-10 max-w-2xl mx-auto px-8 text-center">
-
-      <h1
-        className="
+          {/* Content */}
+          <div className="relative z-10 max-w-2xl mx-auto px-8 text-center">
+            <h1
+              className="
           text-3xl md:text-5xl font-extrabold leading-tight text-[#facc26]
           opacity-0
           animate-[fadeUpSteps_0.8s_steps(4)_forwards]
         "
-      >
-        Exquisite Catering for <br /> Unforgettable Moments
-      </h1>
+            >
+              Exquisite Catering for <br /> Unforgettable Moments
+            </h1>
 
-      <p
-        className="
+            <p
+              className="
           mt-4 text-sm md:text-base text-[#d6efe6]
           opacity-0
           animate-[fadeUpSteps_0.8s_steps(4)_forwards]
         "
-        style={{ animationDelay: "0.25s" }}
-      >
-        Experience culinary excellence and impeccable service tailored to your
-        special day. We bring passion, flavor, and elegance to every table.
-      </p>
+              style={{ animationDelay: "0.25s" }}
+            >
+              Experience culinary excellence and impeccable service tailored to
+              your special day. We bring passion, flavor, and elegance to every
+              table.
+            </p>
 
-      <div
-        className="
+            <div
+              className="
           mt-8 flex justify-center gap-6 flex-wrap
           opacity-0
           animate-[fadeUpSteps_0.6s_steps(3)_forwards]
         "
-        style={{ animationDelay: "0.45s" }}
-      >
-        <button
-          className="
+              style={{ animationDelay: "0.45s" }}
+            >
+              <button
+                className="
             bg-[#facc15] text-green-900
             px-8 py-4 rounded-xl font-semibold
             shadow-lg
@@ -64,12 +63,12 @@ export default function Home() {
             hover:shadow-[0_0_30px_rgba(250,204,21,0.7)]
             animate-[floatSteps_6s_steps(4)_infinite]
           "
-        >
-          View Menus
-        </button>
+              >
+                View Menus
+              </button>
 
-        <button
-          className="
+              <button
+                className="
             bg-[#facc15]/60 border border-[#facc15]
             px-8 py-4 rounded-xl font-semibold backdrop-blur
             shadow-lg
@@ -77,15 +76,13 @@ export default function Home() {
             hover:bg-[#facc15] hover:scale-105
             animate-[floatSteps_8s_steps(5)_infinite]
           "
-        >
-          Book Now
-        </button>
-      </div>
-
-    </div>
-  </div>
-</section>
-
+              >
+                Book Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ================= SERVICES ================= */}
       <section className="max-w-7xl mx-auto px-6 py-20">
@@ -196,7 +193,6 @@ export default function Home() {
           Get a Quote
         </button>
       </section>
-
     </main>
   );
 }

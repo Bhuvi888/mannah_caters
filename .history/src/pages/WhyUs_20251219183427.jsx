@@ -59,7 +59,6 @@ export default function WhyUs() {
 
   return (
     <div className="min-h-screen bg-[#0c120c] text-white overflow-x-hidden">
-
       {/* ================= HERO ================= */}
       <div className="relative pt-28 sm:pt-32">
         {/* Background */}
@@ -92,8 +91,7 @@ export default function WhyUs() {
               variants={fadeInUp}
               className="text-[32px] sm:text-[42px] lg:text-[72px] font-bold font-serif leading-[1.1]"
             >
-              Excellence in{" "}
-              <span className="text-[#e2b857]">Every Bite</span>
+              Excellence in <span className="text-[#e2b857]">Every Bite</span>
             </motion.h1>
 
             <motion.p
@@ -136,7 +134,8 @@ export default function WhyUs() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="mt-20 bg-[#1b2636]/80 backdrop-blur-md border border-white/10 rounded-xl shadow-2xl overflow-hidden"
           >
-            <div className="
+            <div
+              className="
               grid
               grid-cols-1
               sm:grid-cols-2
@@ -145,7 +144,8 @@ export default function WhyUs() {
               sm:divide-y-0
               sm:divide-x
               divide-white/15
-            ">
+            "
+            >
               <Stat value="10000+" label="GUESTS SERVED" />
               <Stat value="7+" label="YEARS OF EXPERIENCE" />
               <Stat value="250+" label="EVENTS CATERED" />
@@ -178,11 +178,31 @@ export default function WhyUs() {
           variants={staggerContainer}
           className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          <FeatureCard icon={<Leaf />} title="Fresh & Hygienic" desc="Certified kitchens and farm-fresh ingredients." />
-          <FeatureCard icon={<Clock />} title="On-Time Delivery" desc="Hot, fresh, and perfectly timed service." />
-          <FeatureCard icon={<ChefHat />} title="Experienced Chefs" desc="Multi-cuisine experts with decades of skill." />
-          <FeatureCard icon={<Users />} title="Scalable Events" desc="From intimate parties to 2000+ guests." />
-          <FeatureCard icon={<Utensils />} title="Custom Menus" desc="Tailored veg & non-veg menus." />
+          <FeatureCard
+            icon={<Leaf />}
+            title="Fresh & Hygienic"
+            desc="Certified kitchens and farm-fresh ingredients."
+          />
+          <FeatureCard
+            icon={<Clock />}
+            title="On-Time Delivery"
+            desc="Hot, fresh, and perfectly timed service."
+          />
+          <FeatureCard
+            icon={<ChefHat />}
+            title="Experienced Chefs"
+            desc="Multi-cuisine experts with decades of skill."
+          />
+          <FeatureCard
+            icon={<Users />}
+            title="Scalable Events"
+            desc="From intimate parties to 2000+ guests."
+          />
+          <FeatureCard
+            icon={<Utensils />}
+            title="Custom Menus"
+            desc="Tailored veg & non-veg menus."
+          />
 
           <motion.div
             whileHover={{ y: -5 }}
@@ -212,9 +232,12 @@ export default function WhyUs() {
           transition={{ duration: 0.6 }}
           className="px-6 max-w-4xl mx-auto"
         >
-          <div className="text-[#e2b857] text-6xl mb-6 font-serif opacity-50">“</div>
+          <div className="text-[#e2b857] text-6xl mb-6 font-serif opacity-50">
+            “
+          </div>
           <p className="text-[20px] md:text-[26px] font-serif italic text-gray-200">
-            Mannah Caterers made our wedding unforgettable. The food and service were flawless.
+            Mannah Caterers made our wedding unforgettable. The food and service
+            were flawless.
           </p>
           <p className="mt-8 text-[#e2b857] font-bold">David & Sarah</p>
           <p className="text-xs text-gray-400 uppercase">Wedding Reception</p>
@@ -260,7 +283,10 @@ export default function WhyUs() {
 function FeatureCard({ icon, title, desc }) {
   return (
     <motion.div
-      variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+      variants={{
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 },
+      }}
       whileHover={{ y: -5 }}
       className="bg-[#1b2636] border border-white/5 rounded-xl p-8 shadow-lg"
     >

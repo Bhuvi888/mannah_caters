@@ -75,7 +75,6 @@ const Menu = () => {
     <div className="min-h-screen flex flex-col bg-[#02301f] overflow-x-hidden">
       <main className="flex-1 flex flex-col items-center pb-20 px-4 sm:px-10 lg:px-40 pt-6 sm:pt-10">
         <div className="w-full max-w-[1200px] flex flex-col gap-6 sm:gap-8">
-
           {/* ---------------- Tabs ---------------- */}
           <div
             className="
@@ -179,7 +178,6 @@ const Menu = () => {
               </motion.div>
             </AnimatePresence>
           </div>
-
         </div>
       </main>
     </div>

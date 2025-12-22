@@ -4,15 +4,8 @@ import { CATEGORIES, MENU_ITEMS } from "../constants";
 import MenuItem from "./MenuItem";
 import CartSidebar from "./CartSideBar";
 
-const CustomizeView = ({
-  cart,
-  guestCount,
-  setGuestCount,
-  toggleCartItem,
-}) => {
-  const selectedItems = MENU_ITEMS.filter((item) =>
-    cart.includes(item.id)
-  );
+const CustomizeView = ({ cart, guestCount, setGuestCount, toggleCartItem }) => {
+  const selectedItems = MENU_ITEMS.filter((item) => cart.includes(item.id));
 
   // Smooth scroll with sticky header offset
   const scrollToCategory = (e, id) => {
@@ -22,8 +15,7 @@ const CustomizeView = ({
 
     const headerOffset = 180;
     const elementPosition = element.getBoundingClientRect().top;
-    const offsetPosition =
-      elementPosition + window.pageYOffset - headerOffset;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
     window.scrollTo({
       top: offsetPosition,
@@ -33,11 +25,9 @@ const CustomizeView = ({
 
   return (
     <div className="flex flex-col lg:flex-row gap-8 w-full max-w-[1400px] mx-auto px-4 lg:px-0">
-      
       {/* Desktop Category Sidebar */}
       <aside className="hidden lg:block w-[240px] flex-shrink-0">
         <div className="sticky top-[140px] bg-[#022c1e] rounded-2xl border border-[#24473b] p-2">
-          
           <div className="px-4 py-3 mb-2 border-b border-[#24473b]/50">
             <h3 className="text-white font-bold text-sm tracking-wide">
               Menu Categories
@@ -73,17 +63,11 @@ const CustomizeView = ({
       {/* Main Menu Content */}
       <main className="flex-1 flex flex-col gap-12 min-w-0">
         {CATEGORIES.map((cat) => {
-          const items = MENU_ITEMS.filter(
-            (item) => item.category === cat.id
-          );
+          const items = MENU_ITEMS.filter((item) => item.category === cat.id);
           if (!items.length) return null;
 
           return (
-            <section
-              key={cat.id}
-              id={cat.id}
-              className="scroll-mt-[180px]"
-            >
+            <section key={cat.id} id={cat.id} className="scroll-mt-[180px]">
               {/* Category Header */}
               <div className="flex items-center gap-4 mb-6">
                 <h3 className="text-xl sm:text-2xl font-bold text-[#d4af37]">

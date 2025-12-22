@@ -19,18 +19,18 @@ const Header = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   const [pastHero, setPastHero] = useState(false);
-useEffect(() => {
-  const onScroll = () => {
-    const scrollY = window.scrollY;
-    setScrolled(scrollY > 20);
+  useEffect(() => {
+    const onScroll = () => {
+      const scrollY = window.scrollY;
+      setScrolled(scrollY > 20);
 
-    // Trigger after hero (≈ 80% of viewport height)
-    setPastHero(scrollY > window.innerHeight * 0.8);
-  };
+      // Trigger after hero (≈ 80% of viewport height)
+      setPastHero(scrollY > window.innerHeight * 0.8);
+    };
 
-  window.addEventListener("scroll", onScroll);
-  return () => window.removeEventListener("scroll", onScroll);
-}, []);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const linkBase =
     "text-sm font-medium leading-normal transition-colors relative";
@@ -42,7 +42,7 @@ useEffect(() => {
 
   return (
     <header
-  className={`
+      className={`
     fixed top-0 left-0 w-full z-50
     transition-all duration-300 ease-out
     ${scrolled ? "h-[64px]" : "h-[80px]"}
@@ -57,10 +57,9 @@ useEffect(() => {
           : "bg-[#013220]/95 backdrop-blur-md border-b border-[#24473b] shadow-lg"
     }
   `}
->
+    >
       {/* TOP BAR */}
       <div className="flex items-center justify-between px-4 sm:px-10 h-full">
-
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
           <img
@@ -81,7 +80,6 @@ useEffect(() => {
 
         {/* Right */}
         <div className="flex items-center gap-3 md:gap-8">
-
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-9">
             {["/", "/menu", "/contact", "/why-us"].map((path, i) => (

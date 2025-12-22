@@ -30,15 +30,11 @@ const QuoteForm = () => {
   });
 
   // 🔥 Convert cart IDs → menu items
-  const selectedItems = MENU_ITEMS.filter((item) =>
-    cart.includes(item.id)
-  );
+  const selectedItems = MENU_ITEMS.filter((item) => cart.includes(item.id));
 
   // 🔥 Convert items → readable string for Google Sheets
   const itemsString = selectedItems
-    .map(
-      (item) => `${item.name} (${item.isVeg ? "Veg" : "Non-Veg"})`
-    )
+    .map((item) => `${item.name} (${item.isVeg ? "Veg" : "Non-Veg"})`)
     .join(", ");
 
   const handleChange = (e) => {
@@ -48,7 +44,7 @@ const QuoteForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
- 
+
     if (selectedItems.length === 0) {
       alert("Please select at least one menu item.");
       return;
@@ -84,7 +80,6 @@ const QuoteForm = () => {
         guests: "",
         message: "",
       });
-
     } catch (err) {
       console.error(err);
       alert("Something went wrong. Please try again.");
@@ -94,12 +89,9 @@ const QuoteForm = () => {
   return (
     <div className="flex-1 order-1 lg:order-2">
       <div className="bg-[#022c1e] rounded-2xl border border-[#d4af37]/30 p-6 md:p-10 shadow-2xl">
-
         {/* Header */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-white mb-2">
-            Event Details
-          </h2>
+          <h2 className="text-2xl font-bold text-white mb-2">Event Details</h2>
           <p className="text-[#94a3b8] text-sm">
             Please fill out the form below so we can verify availability and
             provide an accurate quote.
@@ -107,7 +99,6 @@ const QuoteForm = () => {
         </div>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-
           {/* Row 1 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Name */}
@@ -260,19 +251,18 @@ const QuoteForm = () => {
               Submit Inquiry
               <Send className="w-5 h-5" />
             </button>
-{toast && (
-  <Toast
-    type={toast.type}
-    message={toast.message}
-    onClose={() => setToast(null)}
-  />
-)}
+            {toast && (
+              <Toast
+                type={toast.type}
+                message={toast.message}
+                onClose={() => setToast(null)}
+              />
+            )}
             <p className="text-xs text-[#94a3b8] text-center md:text-left max-w-xs">
               By submitting this form, you agree to our privacy policy. We will
               contact you within 24 hours.
             </p>
           </div>
-
         </form>
       </div>
     </div>

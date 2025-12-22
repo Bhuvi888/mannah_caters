@@ -2,13 +2,13 @@ import * as React from "react";
 
 const SVGComponent = (props) => (
   <svg
-    width="1em"     // Changed from 800px
-    height="1em"    // Changed from 1000px
+    width="1em" // Changed from 800px
+    height="1em" // Changed from 1000px
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     stroke="#d4af37"
-    {...props}      // This allows your classes (w-6 h-6) to override defaults
+    {...props} // This allows your classes (w-6 h-6) to override defaults
   >
     <g id="SVGRepo_bgCarrier" strokeWidth={0} />
     <g

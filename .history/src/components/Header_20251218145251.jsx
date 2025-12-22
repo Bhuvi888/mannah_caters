@@ -9,8 +9,7 @@ const Header = () => {
   const linkBase =
     "text-sm font-medium leading-normal transition-colors relative";
 
-  const linkInactive =
-    "text-slate-300 hover:text-white";
+  const linkInactive = "text-slate-300 hover:text-white";
 
   const linkActive =
     "text-[#d4af37] font-bold after:content-[''] after:absolute after:-bottom-4 after:left-0 after:w-full after:h-[2px] after:bg-[#d4af37]";
@@ -19,13 +18,14 @@ const Header = () => {
     <header
       className={`
         sticky top-0 z-50 backdrop-blur-md border-b shadow-lg
-        ${isWhyPage 
-          ? "bg-[#0c120c]/90 border-white/10" 
-          : "bg-[#0c120c]/90 border-white/10"}
+        ${
+          isWhyPage
+            ? "bg-[#0c120c]/90 border-white/10"
+            : "bg-[#0c120c]/90 border-white/10"
+        }
       `}
     >
       <div className="flex items-center justify-between px-4 sm:px-10 py-3">
-
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
           <img
@@ -40,7 +40,6 @@ const Header = () => {
 
         {/* Right */}
         <div className="flex items-center gap-8">
-
           {/* Nav */}
           <nav className="hidden md:flex items-center gap-9">
             {["/", "/menu", "/contact", "/why-us"].map((path, i) => (
@@ -63,7 +62,6 @@ const Header = () => {
           >
             Enquire Now
           </Link>
-
         </div>
       </div>
     </header>

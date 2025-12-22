@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 /* Tailwind v4 theme tokens */
 @theme {
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
@@ -9,7 +8,6 @@
 html {
   font-family: var(--font-sans);
 }
-
 
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

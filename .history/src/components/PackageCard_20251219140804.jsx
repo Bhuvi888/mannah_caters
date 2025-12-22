@@ -3,7 +3,6 @@ import { ChevronDown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 
-
 const PackageCard = ({ pkg, isOpen, onToggle, onCustomize }) => {
   const navigate = useNavigate();
   const { setCart } = useCart();

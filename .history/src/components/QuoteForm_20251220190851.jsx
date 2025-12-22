@@ -18,7 +18,7 @@ const WEB_APP_URL =
 
 const MenuQuoteForm = () => {
   const { cart } = useCart();
-const NOTIFY_EMAIL = "bhuvaneshkumar433@gmail.com";
+  const NOTIFY_EMAIL = "bhuvaneshkumar433@gmail.com";
 
   const [formData, setFormData] = useState({
     name: "",
@@ -31,15 +31,11 @@ const NOTIFY_EMAIL = "bhuvaneshkumar433@gmail.com";
   });
 
   // Convert cart IDs → full menu items
-  const selectedItems = MENU_ITEMS.filter((item) =>
-    cart.includes(item.id)
-  );
+  const selectedItems = MENU_ITEMS.filter((item) => cart.includes(item.id));
 
   // Convert items → readable string for backend
   const itemsString = selectedItems
-    .map(
-      (item) => `${item.name} (${item.isVeg ? "Veg" : "Non-Veg"})`
-    )
+    .map((item) => `${item.name} (${item.isVeg ? "Veg" : "Non-Veg"})`)
     .join(", ");
 
   const handleChange = (e) => {
@@ -88,7 +84,6 @@ const NOTIFY_EMAIL = "bhuvaneshkumar433@gmail.com";
         guests: "",
         message: "",
       });
-
     } catch (err) {
       console.error(err);
       alert("Something went wrong. Please try again.");
@@ -98,12 +93,9 @@ const NOTIFY_EMAIL = "bhuvaneshkumar433@gmail.com";
   return (
     <div className="flex-1">
       <div className="bg-[#022c1e] rounded-2xl border border-[#d4af37]/30 p-6 md:p-10 shadow-2xl">
-
         {/* Header */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-white mb-2">
-            Event Details
-          </h2>
+          <h2 className="text-2xl font-bold text-white mb-2">Event Details</h2>
           <p className="text-[#94a3b8] text-sm">
             Please fill out the form below so we can verify availability and
             provide an accurate quote.
@@ -111,7 +103,6 @@ const NOTIFY_EMAIL = "bhuvaneshkumar433@gmail.com";
         </div>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-
           {/* Name + Email */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
@@ -230,7 +221,6 @@ const NOTIFY_EMAIL = "bhuvaneshkumar433@gmail.com";
           >
             Submit Menu Inquiry
           </button>
-
         </form>
       </div>
     </div>

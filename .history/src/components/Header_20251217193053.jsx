@@ -5,8 +5,7 @@ const Header = () => {
   const linkBase =
     "text-sm font-medium leading-normal transition-colors relative";
 
-  const linkInactive =
-    "text-slate-300 hover:text-white";
+  const linkInactive = "text-slate-300 hover:text-white";
 
   const linkActive =
     "text-[#d4af37] font-bold after:content-[''] after:absolute after:-bottom-4 after:left-0 after:w-full after:h-[2px] after:bg-[#d4af37]";
@@ -14,7 +13,6 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-[#013220]/95 backdrop-blur-md border-b border-[#24473b] shadow-lg">
       <div className="flex items-center justify-between px-4 sm:px-10 py-3">
-
         {/* Left: Logo + Brand */}
         <Link to="/" className="flex items-center gap-3">
           <img
@@ -29,7 +27,6 @@ const Header = () => {
 
         {/* Right Section */}
         <div className="flex items-center gap-8">
-
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-9">
             <NavLink
@@ -76,7 +73,6 @@ const Header = () => {
           >
             Enquire Now
           </Link>
-
         </div>
       </div>
     </header>

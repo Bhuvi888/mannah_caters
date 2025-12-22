@@ -1,3 +1,3 @@
 export default function Menu() {
-    return <h1>MENU PAGE</h1>
+  return <h1>MENU PAGE</h1>;
 }

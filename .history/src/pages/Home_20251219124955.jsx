@@ -1,5 +1,5 @@
 import React from "react";
-imp
+imp;
 export default function Home() {
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -7,7 +7,6 @@ export default function Home() {
 
   return (
     <main className="bg-[#063826] text-white min-h-screen font-sans">
-
       {/* ================= HERO ================= */}
       <section className="max-w-7xl mx-auto px-6 pt-10">
         <div
@@ -161,7 +160,6 @@ export default function Home() {
           Get a Quote
         </button>
       </section>
-
     </main>
   );
 }

@@ -20,69 +20,64 @@ const QuoteForm = () => {
     guests: "",
     message: "",
   });
-  const WEB_APP_URL = "https://script.google.com/macros/s/AKfycby_gTClTv04-nN5LU9ZXGKad38B8TzEFfw-nz08r3hfe06J9fnldWuKvtutwQyao3dM/exec";
+  const WEB_APP_URL =
+    "https://script.google.com/macros/s/AKfycby_gTClTv04-nN5LU9ZXGKad38B8TzEFfw-nz08r3hfe06J9fnldWuKvtutwQyao3dM/exec";
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  if (!cartItems || cartItems.length === 0) {
-    alert("Please select at least one menu item.");
-    return;
-  }
+    if (!cartItems || cartItems.length === 0) {
+      alert("Please select at least one menu item.");
+      return;
+    }
 
-  const formDataToSend = new FormData();
+    const formDataToSend = new FormData();
 
-  formDataToSend.append("type", "menu");
-  formDataToSend.append("name", formData.name);
-  formDataToSend.append("phone", formData.phone);
-  formDataToSend.append("eventType", formData.eventType);
-  formDataToSend.append("eventDate", formData.date);
-  formDataToSend.append("guestCount", formData.guests);
+    formDataToSend.append("type", "menu");
+    formDataToSend.append("name", formData.name);
+    formDataToSend.append("phone", formData.phone);
+    formDataToSend.append("eventType", formData.eventType);
+    formDataToSend.append("eventDate", formData.date);
+    formDataToSend.append("guestCount", formData.guests);
 
-  // Menu items only (NO PRICE)
-  formDataToSend.append("items", itemsString);
-  formDataToSend.append("notes", formData.message);
+    // Menu items only (NO PRICE)
+    formDataToSend.append("items", itemsString);
+    formDataToSend.append("notes", formData.message);
 
-  try {
-    await fetch(WEB_APP_URL, {
-      method: "POST",
-      body: formDataToSend,
-    });
+    try {
+      await fetch(WEB_APP_URL, {
+        method: "POST",
+        body: formDataToSend,
+      });
 
-    alert("Menu inquiry submitted successfully!");
+      alert("Menu inquiry submitted successfully!");
 
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      date: "",
-      eventType: "",
-      guests: "",
-      message: "",
-    });
-
-  } catch (err) {
-    console.error(err);
-    alert("Failed to submit menu inquiry.");
-  }
-};
-
-
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        date: "",
+        eventType: "",
+        guests: "",
+        message: "",
+      });
+    } catch (err) {
+      console.error(err);
+      alert("Failed to submit menu inquiry.");
+    }
+  };
 
   return (
     <div className="flex-1 order-1 lg:order-2">
       <div className="bg-[#022c1e] rounded-2xl border border-[#d4af37]/30 p-6 md:p-10 shadow-2xl">
-
         {/* Header */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-white mb-2">
-            Event Details
-          </h2>
+          <h2 className="text-2xl font-bold text-white mb-2">Event Details</h2>
           <p className="text-[#94a3b8] text-sm">
             Please fill out the form below so we can verify availability and
             provide an accurate quote.
@@ -90,7 +85,6 @@ const handleSubmit = async (e) => {
         </div>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-
           {/* Row 1 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Name */}
@@ -249,7 +243,6 @@ const handleSubmit = async (e) => {
               contact you within 24 hours.
             </p>
           </div>
-
         </form>
       </div>
     </div>

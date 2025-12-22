@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Routes, Route } from "react-router-dom"; // Removed BrowserRouter import
 import Layout from "./Layout";
@@ -14,7 +13,6 @@ const App = () => {
         <Route index element={<Home />} />
         <Route path="menu" element={<Menu />} />
         <Route path="contact" element={<Contact />} />
-        
       </Route>
     </Routes>
   );

@@ -1,0 +1,121 @@
+export const MENU_ITEMS = [
+  // 🔥 STARTERS
+  {
+    id: "s1",
+    name: "Chicken 65",
+    description: "Crispy deep-fried chicken tossed in aromatic spices.",
+    image: "/images/chicken65.jpg",
+    isVeg: false,
+    category: "starters",
+  },
+  {
+    id: "s2",
+    name: "Chicken Kebab",
+    description: "Juicy grilled chicken kebabs with traditional seasoning.",
+    image: "/images/chicken-kebab.jpg",
+    isVeg: false,
+    category: "starters",
+  },
+  {
+    id: "s3",
+    name: "Chilli Chicken",
+    description: "Indo-Chinese style spicy chicken with peppers and sauces.",
+    image: "/images/chilli-chicken.jpg",
+    isVeg: false,
+    category: "starters",
+  },
+  {
+    id: "s4",
+    name: "Fish Fry (Seer Fish / Salmon)",
+    description: "Shallow-fried premium fish with coastal spices.",
+    image: "/images/fish-fry.jpg",
+    isVeg: false,
+    category: "starters",
+  },
+
+  // 🍚 MAIN COURSE – BIRIYANI & RICE
+  {
+    id: "m1",
+    name: "Chicken Biriyani",
+    description: "Classic dum-style biriyani with aromatic basmati rice.",
+    image: "/images/chicken-biryani.jpg",
+    isVeg: false,
+    category: "mains",
+  },
+  {
+    id: "m2",
+    name: "Mutton Biriyani",
+    description: "Slow-cooked mutton biriyani with rich spices.",
+    image: "/images/mutton-biryani.jpg",
+    isVeg: false,
+    category: "mains",
+  },
+  {
+    id: "m3",
+    name: "Beef Biriyani",
+    description: "Flavorful beef biriyani cooked in traditional style.",
+    image: "/images/beef-biryani.jpg",
+    isVeg: false,
+    category: "mains",
+  },
+  {
+    id: "m4",
+    name: "Ghee Rice",
+    description: "Fragrant rice cooked with ghee and whole spices.",
+    image: "/images/ghee-rice.jpg",
+    isVeg: true,
+    category: "mains",
+  },
+  {
+    id: "m5",
+    name: "Veg Birinji",
+    description: "Traditional vegetable birinji with coconut aroma.",
+    image: "/images/veg-birinji.jpg",
+    isVeg: true,
+    category: "mains",
+  },
+  {
+    id: "m6",
+    name: "Mushroom Birinji",
+    description: "Rich mushroom birinji cooked with mild spices.",
+    image: "/images/mushroom-birinji.jpg",
+    isVeg: true,
+    category: "mains",
+  },
+
+  // 🍨 DESSERTS
+  {
+    id: "d1",
+    name: "Pineapple Kesari",
+    description: "Classic South Indian kesari infused with pineapple.",
+    image: "/images/pineapple-kesari.jpg",
+    isVeg: true,
+    category: "desserts",
+  },
+
+  // 🍦 LIVE COUNTERS
+  {
+    id: "l1",
+    name: "Live Salad Counter",
+    description: "Freshly prepared salads with multiple dressings.",
+    image: "/images/salad-counter.jpg",
+    isVeg: true,
+    category: "live",
+  },
+  {
+    id: "l2",
+    name: "Ice Cream Counter",
+    description: "Multiple ice cream flavors served live.",
+    image: "/images/ice-cream.jpg",
+    isVeg: true,
+    category: "live",
+  },
+  {
+    id: "l3",
+    name: "Fresh Fruit Counter",
+    description: "Seasonal fruits served fresh.",
+    image: "/images/fruits.jpg",
+    isVeg: true,
+    category: "live",
+  },
+];

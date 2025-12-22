@@ -1,9 +1,9 @@
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route } from "react-router-dom";
 
-import Home from "./pages/Home"
-import Menu from "./pages/Menu"
-import Why from "./pages/Why"
-import Contact from "./pages/Contact"
+import Home from "./pages/Home";
+import Menu from "./pages/Menu";
+import Why from "./pages/Why";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <Route path="/why" element={<Why />} />
       <Route path="/contact" element={<Contact />} />
     </Routes>
-  )
+  );
 }
 
-export default App
+export default App;

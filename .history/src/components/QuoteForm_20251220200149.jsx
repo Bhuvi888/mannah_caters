@@ -30,17 +30,13 @@ const QuoteForm = () => {
   });
 
   // 🔥 Convert cart IDs → menu items
-  const selectedItems = MENU_ITEMS.filter((item) =>
-    cart.includes(item.id)
-  );
+  const selectedItems = MENU_ITEMS.filter((item) => cart.includes(item.id));
 
   // 🔥 Convert items → readable string for Google Sheets
   const itemsString = selectedItems
-    .map(
-      (item) => `${item.name} (${item.isVeg ? "Veg" : "Non-Veg"})`
-    )
+    .map((item) => `${item.name} (${item.isVeg ? "Veg" : "Non-Veg"})`)
     .join(", ");
-const [status,setStatus]
+  const [status, setStatus];
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -48,7 +44,7 @@ const [status,setStatus]
 
   const handleSubmit = async (e) => {
     e.preventDefault();
- 
+
     if (selectedItems.length === 0) {
       alert("Please select at least one menu item.");
       return;
@@ -84,7 +80,6 @@ const [status,setStatus]
         guests: "",
         message: "",
       });
-
     } catch (err) {
       console.error(err);
       alert("Something went wrong. Please try again.");
@@ -94,12 +89,9 @@ const [status,setStatus]
   return (
     <div className="flex-1 order-1 lg:order-2">
       <div className="bg-[#022c1e] rounded-2xl border border-[#d4af37]/30 p-6 md:p-10 shadow-2xl">
-
         {/* Header */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-white mb-2">
-            Event Details
-          </h2>
+          <h2 className="text-2xl font-bold text-white mb-2">Event Details</h2>
           <p className="text-[#94a3b8] text-sm">
             Please fill out the form below so we can verify availability and
             provide an accurate quote.
@@ -107,7 +99,6 @@ const [status,setStatus]
         </div>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-
           {/* Row 1 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Name */}
@@ -250,17 +241,17 @@ const [status,setStatus]
               onChange={handleChange}
             />
           </div>
-{status === "success" && (
-  <div className="bg-green-800/40 border border-green-400 text-green-200 text-sm rounded-lg px-4 py-3 animate-fade-in">
-    ✅ Inquiry sent successfully. We’ll contact you shortly.
-  </div>
-)}
+          {status === "success" && (
+            <div className="bg-green-800/40 border border-green-400 text-green-200 text-sm rounded-lg px-4 py-3 animate-fade-in">
+              ✅ Inquiry sent successfully. We’ll contact you shortly.
+            </div>
+          )}
 
-{status === "error" && (
-  <div className="bg-red-800/40 border border-red-400 text-red-200 text-sm rounded-lg px-4 py-3 animate-fade-in">
-    ❌ Something went wrong. Please try again.
-  </div>
-)}
+          {status === "error" && (
+            <div className="bg-red-800/40 border border-red-400 text-red-200 text-sm rounded-lg px-4 py-3 animate-fade-in">
+              ❌ Something went wrong. Please try again.
+            </div>
+          )}
           {/* Submit */}
           <div className="pt-4 flex flex-col md:flex-row gap-6 items-center">
             <button
@@ -270,19 +261,18 @@ const [status,setStatus]
               Submit Inquiry
               <Send className="w-5 h-5" />
             </button>
-{toast && (
-  <Toast
-    type={toast.type}
-    message={toast.message}
-    onClose={() => setToast(null)}
-  />
-)}
+            {toast && (
+              <Toast
+                type={toast.type}
+                message={toast.message}
+                onClose={() => setToast(null)}
+              />
+            )}
             <p className="text-xs text-[#94a3b8] text-center md:text-left max-w-xs">
               By submitting this form, you agree to our privacy policy. We will
               contact you within 24 hours.
             </p>
           </div>
-
         </form>
       </div>
     </div>

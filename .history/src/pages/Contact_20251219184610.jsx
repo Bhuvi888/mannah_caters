@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Phone, MessageSquare, MapPin, Mail, Clock, Instagram } from "lucide-react";
+import {
+  Phone,
+  MessageSquare,
+  MapPin,
+  Mail,
+  Clock,
+  Instagram,
+} from "lucide-react";
 
 const App = ({ companyName = "Mannah Caterers" }) => {
   const [loaded, setLoaded] = useState(false);
@@ -10,7 +17,6 @@ const App = ({ companyName = "Mannah Caterers" }) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-950 to-green-950 overflow-x-hidden">
-
       {/* HERO */}
       <div
         className={`relative h-56 sm:h-72 md:h-96 lg:h-[500px] overflow-hidden transition-opacity duration-1000 ${
@@ -40,7 +46,6 @@ const App = ({ companyName = "Mannah Caterers" }) => {
       {/* MAIN */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-14">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-
           {/* LEFT */}
           <div
             className={`transition-all duration-700 ${
@@ -87,8 +92,7 @@ const App = ({ companyName = "Mannah Caterers" }) => {
                   icon: MapPin,
                   title: "Our Location",
                   text: "23/1 TS Gopal Nagar, Thiruvottiyur, Chennai – 600019",
-                  link:
-                    "https://www.google.com/maps/search/?api=1&query=23/1+TS+Gopal+Nagar+Thiruvottiyur+Chennai+600019",
+                  link: "https://www.google.com/maps/search/?api=1&query=23/1+TS+Gopal+Nagar+Thiruvottiyur+Chennai+600019",
                 },
                 {
                   icon: Mail,
@@ -114,9 +118,7 @@ const App = ({ companyName = "Mannah Caterers" }) => {
                       <item.icon size={20} className="text-green-900" />
                     </div>
                     <div>
-                      <h3 className="text-white font-semibold">
-                        {item.title}
-                      </h3>
+                      <h3 className="text-white font-semibold">{item.title}</h3>
                       <p className="text-gray-300 whitespace-pre-line text-sm">
                         {item.text}
                       </p>

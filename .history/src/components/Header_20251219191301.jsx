@@ -48,7 +48,6 @@ const Header = () => {
     >
       {/* TOP BAR */}
       <div className="flex items-center justify-between px-4 sm:px-10 h-full">
-
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
           <img
@@ -69,7 +68,6 @@ const Header = () => {
 
         {/* Right */}
         <div className="flex items-center gap-3 md:gap-8">
-
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-9">
             {["/", "/menu", "/contact", "/why-us"].map((path, i) => (

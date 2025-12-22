@@ -35,12 +35,9 @@ const QuoteForm = () => {
   return (
     <div className="flex-1 order-1 lg:order-2">
       <div className="bg-[#022c1e] rounded-2xl border border-[#d4af37]/30 p-6 md:p-10 shadow-2xl">
-
         {/* Header */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-white mb-2">
-            Event Details
-          </h2>
+          <h2 className="text-2xl font-bold text-white mb-2">Event Details</h2>
           <p className="text-[#94a3b8] text-sm">
             Please fill out the form below so we can verify availability and
             provide an accurate quote.
@@ -48,7 +45,6 @@ const QuoteForm = () => {
         </div>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-
           {/* Row 1 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Name */}
@@ -207,7 +203,6 @@ const QuoteForm = () => {
               contact you within 24 hours.
             </p>
           </div>
-
         </form>
       </div>
     </div>

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Routes, Route } from "react-router-dom"; // Removed BrowserRouter import
 import Layout from "./components/LayoutLayout";

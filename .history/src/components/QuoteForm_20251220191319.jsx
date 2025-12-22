@@ -30,15 +30,11 @@ const QuoteForm = () => {
   });
 
   // Convert cart IDs → menu items
-  const selectedItems = MENU_ITEMS.filter((item) =>
-    cart.includes(item.id)
-  );
+  const selectedItems = MENU_ITEMS.filter((item) => cart.includes(item.id));
 
   // Convert menu items → readable string
   const itemsString = selectedItems
-    .map(
-      (item) => `${item.name} (${item.isVeg ? "Veg" : "Non-Veg"})`
-    )
+    .map((item) => `${item.name} (${item.isVeg ? "Veg" : "Non-Veg"})`)
     .join(", ");
 
   const handleChange = (e) => {
@@ -85,7 +81,6 @@ const QuoteForm = () => {
         guests: "",
         message: "",
       });
-
     } catch (err) {
       console.error(err);
       alert("Something went wrong. Please try again.");
@@ -95,19 +90,15 @@ const QuoteForm = () => {
   return (
     <div className="flex-1 order-1 lg:order-2">
       <div className="bg-[#022c1e] rounded-2xl border border-[#d4af37]/30 p-6 md:p-10 shadow-2xl">
-
         {/* Header */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-white mb-2">
-            Event Details
-          </h2>
+          <h2 className="text-2xl font-bold text-white mb-2">Event Details</h2>
           <p className="text-[#94a3b8] text-sm">
             Selected menu items will be sent along with this inquiry.
           </p>
         </div>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-
           {/* Name + Email */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <input
@@ -197,7 +188,6 @@ const QuoteForm = () => {
             Submit Menu Inquiry
             <Send className="w-5 h-5" />
           </button>
-
         </form>
       </div>
     </div>

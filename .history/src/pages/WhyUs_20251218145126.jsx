@@ -60,8 +60,7 @@ export default function WhyUs() {
               variants={fadeInUp}
               className="text-[42px] lg:text-[72px] font-bold font-serif leading-[1.1]"
             >
-              Excellence in{" "}
-              <span className="text-[#e2b857]">Every Bite</span>
+              Excellence in <span className="text-[#e2b857]">Every Bite</span>
             </motion.h1>
 
             <motion.p

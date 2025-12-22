@@ -8,9 +8,7 @@ export const CartProvider = ({ children }) => {
 
   const toggleCartItem = (id) => {
     setCart((prev) =>
-      prev.includes(id)
-        ? prev.filter((item) => item !== id)
-        : [...prev, id]
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id],
     );
   };
 
