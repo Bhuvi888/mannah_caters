@@ -18,14 +18,13 @@ const MenuItem = ({ item, isSelected, onToggle, showPopular }) => {
       }`}
     >
       {/* Popular Tag */}
-     {showPopular && item.isPopular && (
-  <div className="absolute top-2 right-2 z-10">
-    <span className="bg-[#d4af37]/90 text-[#013220] text-[9px] font-bold px-2 py-[2px] rounded-full tracking-wide">
-      Popular
-    </span>
-  </div>
-)}
-
+      {showPopular && item.isPopular && (
+        <div className="absolute top-2 right-2 z-10">
+          <span className="bg-[#d4af37]/90 text-[#013220] text-[9px] font-bold px-2 py-[2px] rounded-full tracking-wide">
+            Popular
+          </span>
+        </div>
+      )}
 
       {/* Image */}
       <div className="relative w-20 h-20 shrink-0 rounded-lg overflow-hidden">
@@ -40,9 +39,7 @@ const MenuItem = ({ item, isSelected, onToggle, showPopular }) => {
         <div className="absolute top-1.5 right-1.5 z-10">
           <div
             className={`size-5 rounded-full flex items-center justify-center ${
-              isSelected
-                ? "bg-[#d4af37]"
-                : "border border-white/50 bg-black/20"
+              isSelected ? "bg-[#d4af37]" : "border border-white/50 bg-black/20"
             }`}
           >
             <AnimatePresence>
@@ -75,8 +72,6 @@ const MenuItem = ({ item, isSelected, onToggle, showPopular }) => {
         <p className="text-[#94a3b8] text-[11px] mt-1 line-clamp-1">
           {item.description}
         </p>
-
-       
       </div>
     </motion.button>
   );

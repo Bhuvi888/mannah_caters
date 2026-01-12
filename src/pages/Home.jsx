@@ -10,11 +10,10 @@ export default function App() {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
   useSEO({
-  title: "Mannah Caterers | Premium Wedding & Event Catering in Chennai",
-  description:
-    "Mannah Caterers offers premium wedding and event catering in Chennai. Specializing in biriyani, starters, live counters and desserts for all occasions.",
-});
-
+    title: "Mannah Caterers | Premium Wedding & Event Catering in Chennai",
+    description:
+      "Mannah Caterers offers premium wedding and event catering in Chennai. Specializing in biriyani, starters, live counters and desserts for all occasions.",
+  });
 
   // const [showIntro, setShowIntro] = useState(true);
   // const [fadeOut, setFadeOut] = useState(false);
@@ -190,8 +189,8 @@ export default function App() {
               </span>
 
               {/* Heading */}
- <h1
-  className="
+              <h1
+                className="
     text-3xl sm:text-4xl md:text-5xl lg:text-7xl
     font-extrabold
     leading-tight
@@ -200,49 +199,46 @@ export default function App() {
     max-w-4xl
     mx-auto
   "
->
-  Non-Veg Catering Specialists
-</h1>
+              >
+                Non-Veg Catering Specialists
+              </h1>
 
-<div
-  className="
+              <div
+                className="
     mt-3
     text-xl sm:text-2xl md:text-3xl
     font-bold
     text-[#facc15]
     min-h-[2.5rem] sm:min-h-[3rem]
   "
->
-  for{" "}
-  <TextType
-    text={[
-      "Weddings",
-      "Birthday Parties",
-      "Corporate Events",
-      "Engagements",
-      "Private Functions",
-    ]}
-    typingSpeed={70}
-    pauseDuration={1400}
-    showCursor={true}
-    cursorCharacter="|"
-  />
-</div>
+              >
+                for{" "}
+                <TextType
+                  text={[
+                    "Weddings",
+                    "Birthday Parties",
+                    "Corporate Events",
+                    "Engagements",
+                    "Private Functions",
+                  ]}
+                  typingSpeed={70}
+                  pauseDuration={1400}
+                  showCursor={true}
+                  cursorCharacter="|"
+                />
+              </div>
 
-<p
-  className="
+              <p
+                className="
     mt-5
     text-sm sm:text-base md:text-lg
     text-[#e6f4ee]
     max-w-2xl
     mx-auto
   "
->
-  Crafted for Grand Celebrations with Authentic Non-Veg Delicacies
-</p>
-
-
-
+              >
+                Crafted for Grand Celebrations with Authentic Non-Veg Delicacies
+              </p>
 
               {/* CTA Buttons */}
               <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">

@@ -5,10 +5,11 @@ import { useSEO } from "../hooks/useSEO";
 
 const Quote = () => {
   useSEO({
-  title: "Get a Catering Quote | Wedding & Event Catering Chennai | Mannah Caterers",
-  description:
-    "Request a custom catering quote from Mannah Caterers. Wedding catering, corporate events, live counters and premium biriyani services in Chennai.",
-});
+    title:
+      "Get a Catering Quote | Wedding & Event Catering Chennai | Mannah Caterers",
+    description:
+      "Request a custom catering quote from Mannah Caterers. Wedding catering, corporate events, live counters and premium biriyani services in Chennai.",
+  });
 
   return (
     <div className="flex flex-col min-h-screen bg-[#013220]">

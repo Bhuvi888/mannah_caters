@@ -17,10 +17,10 @@ export default [
         sourceType: "module",
       },
     },
-    settings: { react: { version: 'detect' } },
+    settings: { react: { version: "detect" } },
     plugins: {
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
       react,
     },
     rules: {
@@ -33,7 +33,7 @@ export default [
       "no-unused-vars": ["error", { varsIgnorePattern: "^[A-Z_]" }],
       "react/jsx-uses-vars": "error",
       "react/react-in-jsx-scope": "off",
-      "react/prop-types": "off"
+      "react/prop-types": "off",
     },
   },
 ];

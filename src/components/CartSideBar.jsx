@@ -17,10 +17,8 @@ const CartSidebar = ({
     <aside className="hidden lg:block w-[360px] shrink-0">
       {/* ✅ SINGLE sticky wrapper */}
       <div className="sticky top-[120px] flex flex-col gap-6">
-        
         {/* Main Cart Card */}
         <div className="bg-[#022c1e] rounded-3xl border border-[#24473b] p-5 sm:p-6 shadow-2xl relative">
-          
           {/* Gold accent */}
           <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-[#d4af37]/40 via-[#d4af37] to-[#d4af37]/40" />
 
@@ -113,7 +111,6 @@ const CartSidebar = ({
             )}
           </p>
         </div>
-
       </div>
     </aside>
   );

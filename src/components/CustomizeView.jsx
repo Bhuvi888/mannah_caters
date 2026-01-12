@@ -24,7 +24,7 @@ const CustomizeView = () => {
   const [popularAddedIds, setPopularAddedIds] = useState([]);
   const handlePopularPicks = () => {
     const popularIds = MENU_ITEMS.filter((item) => item.isPopular).map(
-      (item) => item.id
+      (item) => item.id,
     );
 
     const newlyAdded = popularIds.filter((id) => !cart.includes(id));

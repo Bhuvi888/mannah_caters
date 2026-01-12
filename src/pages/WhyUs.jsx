@@ -13,11 +13,11 @@ import { useSEO } from "../hooks/useSEO";
 
 export default function WhyUs() {
   const navigate = useNavigate();
-useSEO({
-  title: "Why Choose Mannah Caterers | Trusted Catering in Chennai",
-  description:
-    "Discover why Mannah Caterers is a trusted name in Chennai for wedding and event catering. Halal food, fresh ingredients and premium service.",
-});
+  useSEO({
+    title: "Why Choose Mannah Caterers | Trusted Catering in Chennai",
+    description:
+      "Discover why Mannah Caterers is a trusted name in Chennai for wedding and event catering. Halal food, fresh ingredients and premium service.",
+  });
 
   /* ---------------- COUNTER ---------------- */
   const Counter = ({ from = 0, to, duration = 1.5 }) => {
@@ -116,7 +116,9 @@ useSEO({
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-[#e2b857] hover:bg-[#cda446] cursor-pointer text-black px-8 py-3.5  font-bold shadow-lg"
-                onClick={() => navigate("/menu", { state: { openTab: "customize" } })}
+                onClick={() =>
+                  navigate("/menu", { state: { openTab: "customize" } })
+                }
               >
                 Plan Your Menu
               </motion.button>
