@@ -86,7 +86,7 @@ const Menu = () => {
             className="
               sticky top-14 sm:top-16
               z-40 bg-[#013220]
-              pt-3 pb-2
+              pt-4 sm:pt-3 pb-2
               border-b border-[#24473b]
             "
           >

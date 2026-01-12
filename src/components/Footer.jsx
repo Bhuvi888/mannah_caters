@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Phone, Mail, MessageCircle } from "lucide-react";
+import DecryptedText from "./DecryptedText";
 
 const Footer = () => {
   const location = useLocation();
@@ -18,7 +19,6 @@ const Footer = () => {
       `}
     >
       <div className="max-w-7xl mx-auto px-6 py-12 grid gap-10 md:grid-cols-4 text-sm text-[#94a3b8]">
-        
         {/* Brand */}
         <div>
           <h4 className="text-[#d4af37] font-bold text-base">
@@ -45,7 +45,10 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="hover:text-white transition-colors">
+              <Link
+                to="/contact"
+                className="hover:text-white transition-colors"
+              >
                 Contact
               </Link>
             </li>
@@ -102,6 +105,30 @@ const Footer = () => {
           © {new Date().getFullYear()} Mannah Caterers.
           <br />
           All rights reserved.
+        </div>
+      </div>
+
+      {/* Developer Credit */}
+      <div className="border-t border-[#24473b]/50 py-4">
+        <div className="max-w-7xl mx-auto px-6 flex justify-center">
+          <a
+            href="https://buildyourgenie.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-[#64748b] hover:text-[#d4af37] transition-colors flex items-center gap-1.5"
+          >
+            <span>Developed by</span>
+            <DecryptedText
+              text="B.U.G — Build Your Genie"
+              speed={40}
+              maxIterations={15}
+              sequential={true}
+              revealDirection="center"
+              className="text-[#d4af37]"
+              encryptedClassName="text-[#94a3b8]"
+              animateOn="hover"
+            />
+          </a>
         </div>
       </div>
     </footer>

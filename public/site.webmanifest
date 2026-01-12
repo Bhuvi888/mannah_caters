@@ -1,6 +1,6 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Mannah Caterers",
+  "short_name": "Mannah",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,9 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#000000",
-  "background_color": "#000000",
-  "display": "standalone"
+  "theme_color": "#02301f",
+  "background_color": "#02301f",
+  "display": "standalone",
+  "start_url": "/",
+  "description": "Premium Wedding & Event Catering in Chennai"
 }
